@@ -24,6 +24,8 @@ export default function Navbar() {
 
   const router = useRouter();
 
+  useEffect(() => {}, [pathname]);
+
   return (
     <section id="navbar" className="navbar">
       <nav className="bg-white shadow-lg">
@@ -31,7 +33,12 @@ export default function Navbar() {
           <div className="flex justify-between">
             <div className="flex space-x-7">
               <div>
-                <a href="#" className="flex items-center py-4 px-2">
+                <a
+                  onClick={() => {
+                    router.push("/");
+                  }}
+                  className="flex items-center py-4 px-2"
+                >
                   <Image
                     src="/img/rust-logo.jpg"
                     width={32}
