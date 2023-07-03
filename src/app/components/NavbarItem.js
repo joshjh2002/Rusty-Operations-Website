@@ -24,8 +24,6 @@ export default function Navbar() {
 
   const router = useRouter();
 
-  useEffect(() => {}, [pathname]);
-
   return (
     <section id="navbar" className="navbar">
       <nav className="bg-white shadow-lg">
