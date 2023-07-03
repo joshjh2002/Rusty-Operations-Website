@@ -6,7 +6,7 @@ export default function Home() {
     <main>
       <div className="bg-[url('/img/rust-banner-notext.png')] bg-cover bg-center h-screen">
         <Navbar />
-        <div className="flex justify-center mt-32">
+        <div className="content">
           <About />
         </div>
       </div>
