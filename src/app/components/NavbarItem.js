@@ -23,7 +23,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <section id="navbar" className="navbar">
+    <section id="navbar" className="sticky top-0 z-50">
       <nav className="bg-white shadow-lg">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between">
