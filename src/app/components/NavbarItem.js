@@ -1,18 +1,18 @@
 "use client";
 import React, { useEffect } from "react";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Navbar() {
   const navbarItemActive =
-    "py-4 px-2 border-b-4 border-green-500 font-semibold text-green-500";
+    "py-4 px-2 border-b-4 border-green-500 font-semibold text-green-500 cursor-pointer";
   const navbarItemInactive =
-    "py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300";
+    "py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 cursor-pointer";
 
   const navbarItemActiveMobile =
-    "block text-sm px-2 py-4 text-white bg-green-500 font-semibold";
+    "block text-sm px-2 py-4 text-white bg-green-500 font-semibold cursor-pointer";
   const navbarItemInactiveMobile =
-    "block text-sm px-2 py-4 hover:bg-green-500 transition duration-300";
+    "block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 cursor-pointer";
 
   const mobile_menu = React.useRef(null);
 
@@ -22,9 +22,7 @@ export default function Navbar() {
 
   const pathname = usePathname();
 
-  useEffect(() => {
-    console.log(pathname);
-  });
+  const router = useRouter();
 
   return (
     <section id="navbar" className="navbar">
@@ -51,7 +49,9 @@ export default function Navbar() {
                   className={
                     pathname == "/" ? navbarItemActive : navbarItemInactive
                   }
-                  href="/"
+                  onClick={() => {
+                    router.push("/");
+                  }}
                 >
                   Home
                 </a>
@@ -61,7 +61,9 @@ export default function Navbar() {
                       ? navbarItemActive
                       : navbarItemInactive
                   }
-                  href="/servers"
+                  onClick={() => {
+                    router.push("/servers");
+                  }}
                 >
                   Servers
                 </a>
@@ -69,7 +71,9 @@ export default function Navbar() {
                   className={
                     pathname == "/news" ? navbarItemActive : navbarItemInactive
                   }
-                  href="/news"
+                  onClick={() => {
+                    router.push("/news");
+                  }}
                 >
                   News
                 </a>
@@ -98,9 +102,11 @@ export default function Navbar() {
         </div>
         <div className="hidden mobile-menu" ref={mobile_menu}>
           <ul className="">
-            <li className="active">
+            <li>
               <a
-                href="/"
+                onClick={() => {
+                  router.push("/");
+                }}
                 className={
                   pathname == "/"
                     ? navbarItemActiveMobile
@@ -112,7 +118,9 @@ export default function Navbar() {
             </li>
             <li>
               <a
-                href="/servers"
+                onClick={() => {
+                  router.push("/servers");
+                }}
                 className={
                   pathname == "/servers"
                     ? navbarItemActiveMobile
@@ -124,7 +132,9 @@ export default function Navbar() {
             </li>
             <li>
               <a
-                href="/news"
+                onClick={() => {
+                  router.push("/news");
+                }}
                 className={
                   pathname == "/news"
                     ? navbarItemActiveMobile
