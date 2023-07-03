@@ -5,14 +5,14 @@ import { usePathname, useRouter } from "next/navigation";
 
 export default function Navbar() {
   const navbarItemActive =
-    "py-4 px-2 border-b-4 border-green-500 font-semibold text-green-500 cursor-pointer";
+    "py-4 px-2 border-b-4 border-green-500 font-semibold text-green-500";
   const navbarItemInactive =
-    "py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 cursor-pointer";
+    "py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300";
 
   const navbarItemActiveMobile =
-    "block text-sm px-2 py-4 text-white bg-green-500 font-semibold cursor-pointer";
+    "block text-sm px-2 py-4 text-white bg-green-500 font-semibold";
   const navbarItemInactiveMobile =
-    "block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 cursor-pointer";
+    "block text-sm px-2 py-4 hover:bg-green-500 transition duration-300";
 
   const mobile_menu = React.useRef(null);
 
@@ -33,12 +33,7 @@ export default function Navbar() {
           <div className="flex justify-between">
             <div className="flex space-x-7">
               <div>
-                <a
-                  onClick={() => {
-                    router.push("/");
-                  }}
-                  className="flex items-center py-4 px-2"
-                >
+                <a href="/" className="flex items-center py-4 px-2">
                   <Image
                     src="/img/rust-logo.jpg"
                     width={32}
@@ -56,9 +51,7 @@ export default function Navbar() {
                   className={
                     pathname == "/" ? navbarItemActive : navbarItemInactive
                   }
-                  onClick={() => {
-                    router.push("/");
-                  }}
+                  href="/"
                 >
                   Home
                 </a>
@@ -68,9 +61,7 @@ export default function Navbar() {
                       ? navbarItemActive
                       : navbarItemInactive
                   }
-                  onClick={() => {
-                    router.push("/servers");
-                  }}
+                  href="/servers"
                 >
                   Servers
                 </a>
@@ -78,9 +69,7 @@ export default function Navbar() {
                   className={
                     pathname == "/news" ? navbarItemActive : navbarItemInactive
                   }
-                  onClick={() => {
-                    router.push("/news");
-                  }}
+                  href="/news"
                 >
                   News
                 </a>
@@ -111,42 +100,36 @@ export default function Navbar() {
           <ul className="">
             <li>
               <a
-                onClick={() => {
-                  router.push("/");
-                }}
                 className={
                   pathname == "/"
                     ? navbarItemActiveMobile
                     : navbarItemInactiveMobile
                 }
+                href="/"
               >
                 Home
               </a>
             </li>
             <li>
               <a
-                onClick={() => {
-                  router.push("/servers");
-                }}
                 className={
                   pathname == "/servers"
                     ? navbarItemActiveMobile
                     : navbarItemInactiveMobile
                 }
+                href="/servers"
               >
                 Servers
               </a>
             </li>
             <li>
               <a
-                onClick={() => {
-                  router.push("/news");
-                }}
                 className={
                   pathname == "/news"
                     ? navbarItemActiveMobile
                     : navbarItemInactiveMobile
                 }
+                href="/news"
               >
                 News
               </a>
