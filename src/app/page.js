@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="">
       <Navbar />
-      <div className="content">
+      <div className="flex justify-center">
         <About />
       </div>
     </main>

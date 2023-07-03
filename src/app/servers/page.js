@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="">
       <Navbar />
-      <div className="content">
+      <div className="flex justify-center">
         <Servers />
       </div>
     </main>
