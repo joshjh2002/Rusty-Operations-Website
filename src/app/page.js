@@ -1,4 +1,4 @@
-import About from "./components/About";
+import Welcome from "./components/Welcome";
 import Navbar from "./components/NavbarItem.js";
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
       <div className="bg-[url('/img/rust-banner-notext.png')] bg-cover bg-center h-screen">
         <Navbar />
         <div className="content">
-          <About />
+          <Welcome />
         </div>
       </div>
     </main>
