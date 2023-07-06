@@ -31,7 +31,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Rusty Operations", // OG title
-    description: "For Rusty Operations Staff", // OG Description
+    description: "Bringing People Together", // OG Description
     siteName: "Rusty Operations", // OG Site name
     url: "https://admin.rustyoperations.net", // OG URL
     images: [
