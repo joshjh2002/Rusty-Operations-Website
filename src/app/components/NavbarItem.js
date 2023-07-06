@@ -26,7 +26,7 @@ export default function Navbar() {
     <section id="navbar" className="sticky top-0 z-50">
       <nav className="bg-white shadow-lg">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex justify-between">
+          <div className="flex justify-center">
             <div className="flex space-x-7">
               <div>
                 <a href="/" className="flex items-center py-4 px-2">
