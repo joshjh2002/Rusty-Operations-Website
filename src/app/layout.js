@@ -8,7 +8,7 @@ export const metadata = {
   title: "Rusty Operations", // Text shown in the tab
   description: "Bringing People Together", // Meta description for SEO
   siteName: "Rusty Operations", // Site name for SEO
-  url: "https://admin.rustyoperations.net", // Site URL
+  url: "https://www.rustyoperations.net", // Site URL
   authors: [
     {
       name: "Josh Helman",
@@ -33,7 +33,7 @@ export const metadata = {
     title: "Rusty Operations", // OG title
     description: "Bringing People Together", // OG Description
     siteName: "Rusty Operations", // OG Site name
-    url: "https://admin.rustyoperations.net", // OG URL
+    url: "https://www.rustyoperations.net", // OG URL
     images: [
       {
         url: "https://rusty-operations-admin-panel.web.app/img/rust-banner.jpg", // Image for sites to use
