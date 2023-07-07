@@ -14,7 +14,7 @@
   height: calc(100vh - 64px);
   margin: auto;
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 
 #welcome h1 {
@@ -32,7 +32,7 @@
   text-align: center;
 }
 
-#welcome .content section {
+.content section {
   margin: auto;
   padding-top: 10px;
   padding-bottom: 10px;
