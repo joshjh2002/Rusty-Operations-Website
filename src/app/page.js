@@ -4,8 +4,8 @@ import Navbar from "./components/NavbarItem.js";
 export default function Home() {
   return (
     <main>
-      <div className="bg-[url('/img/rust-banner-notext.png')] bg-cover bg-center h-screen bg-fixed">
-        <Navbar />
+      <Navbar />
+      <div className="bg-[url('/img/rust-banner-notext.png')] bg-cover bg-center bg-fixed overflow-auto">
         <div className="content">
           <Welcome />
         </div>
