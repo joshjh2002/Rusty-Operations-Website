@@ -4,7 +4,7 @@ export default function Welcome() {
   return (
     <section id="welcome">
       <h1>Welcome to Rusty Operations!</h1>
-      <div className="grid grid-cols-2 mt-8 ">
+      <div className="grid md:grid-cols-2 mt-8 ">
         <div className="flex items-center justify-center">
           <Image
             src="/img/rust-logo.jpg"

@@ -5,55 +5,102 @@
 :root {
   font-family: "Roboto Slab", serif;
   --extra-large-content-size: 1150px;
+  --large-content-size: 940px;
+  --medium-content-size: 720px;
+  --small-content-size: 540px;
+}
+
+.content {
+  height: calc(100vh - 64px);
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+#welcome h1 {
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  text-align: center;
+}
+
+#welcome p {
+  color: white;
+  font-weight: 300;
+  text-align: center;
+}
+
+#welcome .content section {
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .content {
+    width: 95%;
+  }
+
+  .content img {
+    width: 200px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  #welcome h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.3em;
+  }
+
+  #welcome p {
+    font-size: 0.9rem;
+  }
+
+  .content {
+    width: var(--small-content-size);
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  #welcome h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.3em;
+  }
+
+  .content {
+    width: var(--medium-content-size);
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  #welcome h1 {
+    font-size: 2rem;
+    letter-spacing: 0.3em;
+  }
+
+  #welcome p {
+    font-size: 1rem;
+  }
+
+  .content {
+    width: var(--large-content-size);
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   #welcome h1 {
-    color: white;
     font-size: 2.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
     letter-spacing: 0.3em;
-    border-bottom: 1px solid white;
-    border-top: 1px solid white;
-    text-align: center;
-  }
-
-  #welcome p {
-    color: white;
-    font-size: 1rem;
-    font-weight: 300;
-    text-align: center;
-  }
-
-  #welcome .content section {
-    margin: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 
   .content {
-    height: calc(100vh - 64px);
     width: var(--extra-large-content-size);
-    margin: auto;
-    display: flex;
-    align-items: center;
   }
 }
