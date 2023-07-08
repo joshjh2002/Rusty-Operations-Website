@@ -50,6 +50,7 @@ export const metadata = {
       icon: "https://rusty-operations-admin-panel.web.app/favicon.ico",
     },
   },
+  viewport: "width=device-width, height=device-height, initial-scale=1.0", // Viewport data
 };
 
 export default function RootLayout({ children }) {
