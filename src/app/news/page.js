@@ -6,11 +6,13 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="bg-[url('/img/rust-banner-notext.png')] bg-cover bg-center h-screen bg-fixed">
-      <Navbar />
-      <div className="content">
-        <News />
+    <main>
+      <div className="bg-[url('/img/rust-banner-notext.png')] bg-cover bg-center bg-fixed">
+        <Navbar />
+        <div className="content">
+          <News />
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
