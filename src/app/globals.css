@@ -8,6 +8,8 @@
   --large-content-size: 940px;
   --medium-content-size: 720px;
   --small-content-size: 540px;
+
+  --rust-accent: rgb(255, 149, 0);
 }
 
 .content {

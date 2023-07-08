@@ -5,14 +5,14 @@ import { usePathname, useRouter } from "next/navigation";
 
 export default function Navbar() {
   const navbarItemActive =
-    "py-4 px-2 border-b-4 border-green-500 font-semibold text-green-500";
+    "py-4 px-2 border-b-4 border-[color:var(--rust-accent)] font-semibold text-[color:var(--rust-accent)]";
   const navbarItemInactive =
-    "py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300";
+    "py-4 px-2 text-gray-500 font-semibold hover:text-[color:var(--rust-accent)] transition duration-300";
 
   const navbarItemActiveMobile =
-    "block text-sm px-2 py-4 text-white bg-green-500 font-semibold";
+    "block text-sm px-2 py-4 text-white bg-[color:var(--rust-accent)] font-semibold";
   const navbarItemInactiveMobile =
-    "block text-sm px-2 py-4 hover:bg-green-500 transition duration-300";
+    "block text-sm px-2 py-4 hover:bg-[color:var(--rust-accent)] transition duration-300";
 
   const mobile_menu = React.useRef(null);
 
@@ -77,7 +77,7 @@ export default function Navbar() {
                 onClick={toggleMenu}
               >
                 <svg
-                  className=" w-6 h-6 text-gray-500 hover:text-green-500 "
+                  className=" w-6 h-6 text-gray-500 hover:text-[color:var(--rust-accent)]"
                   x-show="!showMenu"
                   fill="none"
                   strokeLinecap="round"
