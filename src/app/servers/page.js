@@ -4,9 +4,9 @@ import Servers from "../components/Servers";
 import Navbar from "../components/NavbarItem.js";
 import React, { useEffect } from "react";
 
-export default function Home() {
+export default function Page() {
   useEffect(() => {
-    document.title = "Rusty Opertations | Servers";
+    document.title = "Rusty Operations | Servers";
   }, []);
 
   return (

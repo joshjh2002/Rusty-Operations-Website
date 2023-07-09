@@ -20,7 +20,7 @@
   justify-content: center;
 }
 
-#welcome h1 {
+h1 {
   color: white;
   font-weight: 700;
   text-transform: uppercase;
@@ -29,7 +29,7 @@
   text-align: center;
 }
 
-#welcome p {
+p {
   color: white;
   font-weight: 300;
   text-align: center;
@@ -54,12 +54,12 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  #welcome h1 {
+  h1 {
     font-size: 1.5rem;
     letter-spacing: 0.3em;
   }
 
-  #welcome p {
+  p {
     font-size: 0.9rem;
   }
 
@@ -70,7 +70,7 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  #welcome h1 {
+  h1 {
     font-size: 1.5rem;
     letter-spacing: 0.3em;
   }
@@ -82,12 +82,12 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  #welcome h1 {
+  h1 {
     font-size: 2rem;
     letter-spacing: 0.3em;
   }
 
-  #welcome p {
+  p {
     font-size: 1rem;
   }
 
@@ -98,7 +98,7 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  #welcome h1 {
+  h1 {
     font-size: 2.5rem;
     letter-spacing: 0.3em;
   }

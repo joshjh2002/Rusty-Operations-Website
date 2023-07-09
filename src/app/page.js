@@ -6,7 +6,7 @@ import React, { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
-    document.title = "Rusty Opertations | Home";
+    document.title = "Rusty Operations | Home";
   }, []);
 
   return (

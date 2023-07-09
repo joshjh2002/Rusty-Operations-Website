@@ -4,9 +4,9 @@ import News from "../components/News";
 import Navbar from "../components/NavbarItem.js";
 import React, { useEffect } from "react";
 
-export default function Home() {
+export default function Page() {
   useEffect(() => {
-    document.title = "Rusty Opertations | News";
+    document.title = "Rusty Operations | News";
   }, []);
 
   return (
