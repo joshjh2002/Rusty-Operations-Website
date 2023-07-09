@@ -10,13 +10,12 @@ export default function Page() {
 
   return (
     <main>
-      <div className="bg-[url('/img/rust-banner-notext.png')] bg-cover bg-center bg-fixed">
-        <Navbar />
-        <div className="content">
-          <section id="news">
-            <h1>News</h1>
-          </section>
-        </div>
+      <div className="bg"></div>
+      <Navbar />
+      <div className="content">
+        <section id="news">
+          <h1>News</h1>
+        </section>
       </div>
     </main>
   );
