@@ -13,30 +13,29 @@ export default function Page() {
 
   return (
     <main>
-      <div className="bg-[url('/img/rust-banner-notext.png')] bg-cover bg-center bg-fixed">
-        <Navbar />
-        <div className="content">
-          <section id="Servers">
-            <h1>Servers</h1>
-            <div className="card-container">
-              {servers.map((server) => (
-                <div className="card">
-                  <div className="card-title">
-                    <h2>{server}</h2>
-                  </div>
-                  <div className="card-image">
-                    <Image
-                      src="/img/rust-logo.jpg"
-                      width={200}
-                      height={200}
-                      alt="Rusty Operations Logo"
-                    />
-                  </div>
+      <div className="bg"></div>
+      <Navbar />
+      <div className="content">
+        <section id="Servers">
+          <h1>Servers</h1>
+          <div className="card-container">
+            {servers.map((server) => (
+              <div className="card">
+                <div className="card-title">
+                  <h2>{server}</h2>
                 </div>
-              ))}
-            </div>
-          </section>
-        </div>
+                <div className="card-image">
+                  <Image
+                    src="/img/rust-logo.jpg"
+                    width={200}
+                    height={200}
+                    alt="Rusty Operations Logo"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
     </main>
   );
