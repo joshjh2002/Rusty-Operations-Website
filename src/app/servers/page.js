@@ -1,7 +1,6 @@
 "use client";
 
-import Servers from "../components/Servers";
-import Navbar from "../components/NavbarItem.js";
+import Navbar from "../components/navbar.js";
 import React, { useEffect } from "react";
 
 export default function Page() {
@@ -14,7 +13,9 @@ export default function Page() {
       <div className="bg-[url('/img/rust-banner-notext.png')] bg-cover bg-center bg-fixed">
         <Navbar />
         <div className="content">
-          <Servers />
+          <section id="Servers">
+            <h1>Servers</h1>
+          </section>
         </div>
       </div>
     </main>
