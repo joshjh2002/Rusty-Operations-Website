@@ -1,19 +1,33 @@
 "use client";
 
 import Navbar from "../components/navbar.js";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { db } from "../firebaseInit.js";
-import { ref, onValue } from "firebase/database";
+import { ref, onValue, set } from "firebase/database";
+
+import Image from "next/image";
+
+import "./style.css";
 
 export default function Page() {
+  const [articles, setArticles] = useState([]);
   useEffect(() => {
     document.title = "Rusty Operations | News";
 
     const usernameRef = ref(db, `news`);
     onValue(usernameRef, (snapshot) => {
       const data = snapshot.val();
-      console.log(data);
+      let temp = [];
+      data.forEach((item) => {
+        temp.push({
+          id: item.id,
+          title: item.title,
+          timestamp: item.timestamp,
+        });
+      });
+      setArticles(temp);
+      console.log(temp);
     });
   }, []);
 
@@ -24,6 +38,34 @@ export default function Page() {
       <div className="content">
         <section id="news">
           <h1>News</h1>
+          <div className="flex justify-center p-4">
+            <div className="grid place-items-center grid-cols-3 gap-4">
+              {
+                /* Iterates over all the items in the links array stored 
+        in links.json and created a HTML element for them */
+                articles.map((item) => (
+                  <a href={`news/${item.id}`} key={item.id} className="card">
+                    <div className="card-image">
+                      <Image
+                        src={"/img/rust-logo.jpg"}
+                        width={200}
+                        height={0}
+                        className=""
+                      />
+                    </div>
+                    <div className="card-content">
+                      <h2 className="text-center card-title rusty-font">
+                        {item.title}
+                      </h2>
+                      <p className="text-center card-text rusty-font">
+                        {item.timestamp}
+                      </p>
+                    </div>
+                  </a>
+                ))
+              }
+            </div>
+          </div>
         </section>
       </div>
     </main>
