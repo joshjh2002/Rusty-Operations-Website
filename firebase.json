@@ -15,6 +15,10 @@
       {
         "source": "/news",
         "destination": "/news.html"
+      },
+      {
+        "source": "/news/view",
+        "destination": "/news/view.html"
       }
     ]
   }

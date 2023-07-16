@@ -10,15 +10,24 @@ import { Converter } from "showdown";
 
 import "./style.css";
 
-export default function Page({ params, searchParams }) {
+import { useSearchParams } from "next/navigation";
+
+export default function Page() {
+  const searchParams = useSearchParams();
+  const [id, setId] = useState(searchParams.get("id"));
   const [content, setContent] = useState("");
 
   useEffect(() => {
     document.title = "Rusty Operations | News";
 
-    const fileName = ref(db, `news/${searchParams.id}/file`);
+    const fileName = ref(db, `news/${id}/file`);
     onValue(fileName, (snapshot) => {
       const data = snapshot.val();
+
+      if (data == null) {
+        setContent("<h1>404</h1>");
+        return;
+      }
 
       fetch(data) // Your POST endpoint
         .then((response) => response.text()) // If the response is a JSON object return it parsed, otherwise return the response as text
