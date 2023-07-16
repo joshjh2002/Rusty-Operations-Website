@@ -23,7 +23,9 @@ export default function Page() {
         temp.push({
           id: item.id,
           title: item.title,
+          description: item.description,
           timestamp: item.timestamp,
+          image: item.image,
         });
       });
       setArticles(temp);
@@ -39,7 +41,7 @@ export default function Page() {
         <section id="news">
           <h1>News</h1>
           <div className="flex justify-center p-4">
-            <div className="grid place-items-center grid-cols-3 gap-4">
+            <div className="grid place-items-center grid-cols-1 gap-4">
               {
                 /* Iterates over all the items in the links array stored 
         in links.json and created a HTML element for them */
@@ -51,7 +53,7 @@ export default function Page() {
                   >
                     <div className="card-image">
                       <Image
-                        src={"/img/rust-logo.jpg"}
+                        src={item.image}
                         width={200}
                         height={0}
                         className=""
@@ -62,7 +64,7 @@ export default function Page() {
                         {item.title}
                       </h2>
                       <p className="text-center card-text rusty-font">
-                        {item.timestamp}
+                        {item.description}
                       </p>
                     </div>
                   </a>

@@ -74,6 +74,11 @@ p {
     font-size: 0.9rem;
   }
 
+  h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.3em;
+  }
+
   .content {
     width: var(--small-content-size);
   }
@@ -81,11 +86,6 @@ p {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  h1 {
-    font-size: 1.5rem;
-    letter-spacing: 0.3em;
-  }
-
   .content {
     width: var(--medium-content-size);
   }
