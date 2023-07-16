@@ -44,7 +44,11 @@ export default function Page() {
                 /* Iterates over all the items in the links array stored 
         in links.json and created a HTML element for them */
                 articles.map((item) => (
-                  <a href={`news/${item.id}`} key={item.id} className="card">
+                  <a
+                    href={`news/view?id=${item.id}`}
+                    key={item.id}
+                    className="card"
+                  >
                     <div className="card-image">
                       <Image
                         src={"/img/rust-logo.jpg"}

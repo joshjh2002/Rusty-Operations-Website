@@ -16,7 +16,7 @@ export default function Page({ params, searchParams }) {
   useEffect(() => {
     document.title = "Rusty Operations | News";
 
-    const fileName = ref(db, `news/${params.id}/file`);
+    const fileName = ref(db, `news/${searchParams.id}/file`);
     onValue(fileName, (snapshot) => {
       const data = snapshot.val();
 

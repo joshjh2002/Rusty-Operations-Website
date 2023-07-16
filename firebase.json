@@ -1,0 +1,21 @@
+{
+  "hosting": {
+    "public": "out",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "site": "rusty-operations-community-website-test",
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/servers",
+        "destination": "/servers.html"
+      },
+      {
+        "source": "/news",
+        "destination": "/news.html"
+      }
+    ]
+  }
+}
