@@ -27,3 +27,8 @@
 .article ul {
   list-style: normal;
 }
+
+ul > li,
+ol > li {
+  margin-left: 40px;
+}
