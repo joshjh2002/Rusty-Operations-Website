@@ -44,6 +44,7 @@ p {
   color: white;
   font-weight: 300;
   text-align: center;
+  overflow-wrap: break-word;
 }
 
 .content section {
@@ -55,7 +56,7 @@ p {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .content {
-    width: 80%;
+    width: 90%;
   }
 
   .content img {

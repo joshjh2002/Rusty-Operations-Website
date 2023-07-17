@@ -1,3 +1,7 @@
+h1 {
+  color: black;
+  border-color: black;
+}
 .article h2 {
   font-size: x-large;
   text-decoration: underline;
@@ -13,22 +17,57 @@
 }
 
 .article {
-  color: white;
-  width: 100%;
+  background-color: white;
+  padding: 1rem;
+  width: inherit;
 }
 
 .article p,
-.article a {
+.article a,
+.article li {
+  color: black;
   font-size: medium;
+  font-weight: normal;
   text-align: left;
+  overflow-wrap: break-word;
 }
 
 .article ol,
 .article ul {
   list-style: normal;
+  font-size: medium;
 }
 
 ul > li,
 ol > li {
   margin-left: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    width: 95%;
+  }
+
+  .article p,
+  .article a,
+  .article li {
+    font-size: small;
+  }
+
+  h1 {
+    font-size: x-large;
+  }
+  .article h2 {
+    font-size: large;
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .article h3 {
+    font-size: medium;
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: left;
+  }
 }

@@ -25,7 +25,7 @@ export default function Page() {
       const data = snapshot.val();
 
       if (data == null) {
-        setContent("<h1>404</h1>");
+        setContent("<h1>This article does not exist</h1>");
         return;
       }
 
@@ -45,7 +45,10 @@ export default function Page() {
       <Navbar />
       <div className="content">
         <section id="article" className="article">
-          <div dangerouslySetInnerHTML={{ __html: content }}></div>
+          <div
+            className="block p-4"
+            dangerouslySetInnerHTML={{ __html: content }}
+          ></div>
         </section>
       </div>
     </main>
