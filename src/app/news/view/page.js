@@ -44,11 +44,8 @@ export default function Page() {
       <div className="bg"></div>
       <Navbar />
       <div className="content">
-        <section id="news">
-          <div
-            dangerouslySetInnerHTML={{ __html: content }}
-            className="article"
-          ></div>
+        <section id="article" className="article">
+          <div dangerouslySetInnerHTML={{ __html: content }}></div>
         </section>
       </div>
     </main>
