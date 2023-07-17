@@ -22,8 +22,6 @@ export default function Navbar() {
 
   const pathname = usePathname();
 
-  console.log(pathname);
-
   return (
     <section id="navbar" className="sticky top-0 z-50">
       <nav className="bg-white shadow-lg">

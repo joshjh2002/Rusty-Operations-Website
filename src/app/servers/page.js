@@ -12,8 +12,8 @@ export default function Page() {
   useEffect(() => {
     document.title = "Rusty Operations | Servers";
 
-    const servers = ref(db, `servers`);
-    onValue(servers, (snapshot) => {
+    const serversRef = ref(db, `servers`);
+    onValue(serversRef, (snapshot) => {
       const data = snapshot.val();
       console.log(data);
       let temp = [];

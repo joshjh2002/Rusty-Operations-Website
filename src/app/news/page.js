@@ -15,8 +15,8 @@ export default function Page() {
   useEffect(() => {
     document.title = "Rusty Operations | News";
 
-    const usernameRef = ref(db, `news`);
-    onValue(usernameRef, (snapshot) => {
+    const articleRef = ref(db, `news`);
+    onValue(articleRef, (snapshot) => {
       const data = snapshot.val();
       let temp = [];
       data.forEach((item) => {

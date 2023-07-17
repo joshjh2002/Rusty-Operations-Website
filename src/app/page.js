@@ -23,6 +23,7 @@ export default function Home() {
                 width={400}
                 height={400}
                 className="rounded-full"
+                alt="Rusty Operations Logo"
               />
             </div>
             <div className="flex items-center justify-center">
