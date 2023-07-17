@@ -22,6 +22,8 @@ export default function Navbar() {
 
   const pathname = usePathname();
 
+  console.log(pathname);
+
   return (
     <section id="navbar" className="sticky top-0 z-50">
       <nav className="bg-white shadow-lg">
@@ -63,7 +65,9 @@ export default function Navbar() {
                 </a>
                 <a
                   className={
-                    pathname == "/news" ? navbarItemActive : navbarItemInactive
+                    pathname == "/news" || "/news/view"
+                      ? navbarItemActive
+                      : navbarItemInactive
                   }
                   href="/news"
                 >
