@@ -26,6 +26,7 @@ export default function Page() {
           description: item.description,
           timestamp: item.timestamp,
           image: item.image,
+          alt: item.alt,
         });
       });
       setArticles(temp);
@@ -44,7 +45,7 @@ export default function Page() {
             <div className="grid place-items-center grid-cols-1 gap-4">
               {
                 /* Iterates over all the items in the links array stored 
-        in links.json and created a HTML element for them */
+                in links.json and created a HTML element for them */
                 articles.map((item) => (
                   <a
                     href={`news/view?id=${item.id}`}
@@ -57,6 +58,7 @@ export default function Page() {
                         width={200}
                         height={0}
                         className=""
+                        alt={item.alt}
                       />
                     </div>
                     <div className="card-content">
