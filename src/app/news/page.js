@@ -4,7 +4,7 @@ import Navbar from "../components/navbar.js";
 import React, { useEffect, useState } from "react";
 
 import { db } from "../firebaseInit.js";
-import { ref, onValue, set } from "firebase/database";
+import { ref, onValue } from "firebase/database";
 
 import Image from "next/image";
 
