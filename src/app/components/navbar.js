@@ -55,7 +55,7 @@ export default function Navbar() {
                 </a>
                 <a
                   className={
-                    pathname == "/servers"
+                    pathname.startsWith("/servers")
                       ? navbarItemActive
                       : navbarItemInactive
                   }
@@ -65,7 +65,7 @@ export default function Navbar() {
                 </a>
                 <a
                   className={
-                    pathname == "/news" || "/news/view"
+                    pathname.startsWith("/news")
                       ? navbarItemActive
                       : navbarItemInactive
                   }
