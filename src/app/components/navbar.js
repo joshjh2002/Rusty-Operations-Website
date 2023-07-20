@@ -111,7 +111,7 @@ export default function Navbar() {
             <li>
               <a
                 className={
-                  pathname == "/servers"
+                  pathname.startsWith("/servers")
                     ? navbarItemActiveMobile
                     : navbarItemInactiveMobile
                 }
@@ -123,7 +123,7 @@ export default function Navbar() {
             <li>
               <a
                 className={
-                  pathname == "/news"
+                  pathname.startsWith("/news")
                     ? navbarItemActiveMobile
                     : navbarItemInactiveMobile
                 }

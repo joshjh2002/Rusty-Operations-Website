@@ -47,20 +47,20 @@ ol > li {
   margin-left: 40px;
 }
 
-a:link {
+.article a:link {
   color: #0000ee;
   text-decoration: none;
 }
 
-a:visited {
+.article a:visited {
   text-decoration: none;
 }
 
-a:hover {
+.article a:hover {
   text-decoration: underline;
 }
 
-a:active {
+.article a:active {
   text-decoration: underline;
 }
 
@@ -81,7 +81,7 @@ a:active {
   margin-left: 1rem;
 }
 
-.article code {
+.article pre code {
   font-size: medium;
   font-weight: normal;
   text-align: left;
