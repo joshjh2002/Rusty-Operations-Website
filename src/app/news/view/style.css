@@ -43,6 +43,53 @@ ol > li {
   margin-left: 40px;
 }
 
+a:link {
+  color: #0000ee;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+.article img {
+  width: 100%;
+  height: auto;
+  margin: 0.5rem;
+}
+
+.article code > p {
+  font-size: medium;
+  font-style: italic;
+  font-weight: normal;
+  text-align: left;
+  overflow-wrap: break-word;
+  border-left: 4px solid black;
+  padding-left: 1rem;
+  margin-left: 1rem;
+}
+
+code {
+  font-size: medium;
+  font-weight: normal;
+  text-align: left;
+  overflow-wrap: break-word;
+  background-color: #f2f2f2;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  border: 1px solid #e2e2e2;
+  margin: 0.2rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
 @media only screen and (max-width: 600px) {
   .content {
     width: 95%;
