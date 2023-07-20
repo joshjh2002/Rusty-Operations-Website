@@ -83,11 +83,48 @@
   margin-left: 1rem;
 }
 
-.article table {
-  border-collapse: collapse;
+.article .table-width {
   width: 100%;
-  margin: 0.5rem;
+  overflow-y: hidden;
   overflow-x: auto;
+}
+
+.article .table {
+  width: 100%;
+  min-width: 656px;
+  margin-bottom: 0;
+  max-width: none;
+}
+
+.article .scroll-bar {
+  /* width */
+  &::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: lightgray;
+    border-radius: 10px;
+  }
+}
+
+.article th {
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
+}
+
+.article td {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
 }
 
 .article pre:has(code) {
@@ -105,7 +142,6 @@
   font-size: medium;
   font-weight: normal;
   text-align: left;
-
   overflow-wrap: break-word;
   font-family: "Courier New", Courier, monospace;
   width: 100%;
@@ -119,7 +155,9 @@
   .article p,
   .article a,
   .article li,
-  .article code {
+  .article code,
+  .article th,
+  .article td {
     font-size: small !important;
   }
 
