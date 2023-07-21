@@ -10,17 +10,13 @@ import { Converter } from "showdown";
 
 import "./style.css";
 
-import { useSearchParams } from "next/navigation";
-
-export default function Page() {
-  const searchParams = useSearchParams();
-  const [id, setId] = useState(searchParams.get("id"));
+export default function Page({ params, searchParams }) {
   const [content, setContent] = useState("");
 
   useEffect(() => {
     document.title = "Rusty Operations | News";
 
-    const fileName = ref(db, `news/${id}/file`);
+    const fileName = ref(db, `news/${searchParams.id}/file`);
     onValue(fileName, (snapshot) => {
       const data = snapshot.val();
 
