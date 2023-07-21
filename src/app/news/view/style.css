@@ -48,12 +48,12 @@
 }
 
 .article a:link {
-  color: limegreen;
+  color: lightblue;
   text-decoration: none;
 }
 
 .article a:visited {
-  color: limegreen;
+  color: lightblue;
 }
 
 .article a:hover {

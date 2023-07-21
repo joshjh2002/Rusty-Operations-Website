@@ -9,8 +9,8 @@
         "destination": "/index.html"
       },
       {
-        "source": "/servers",
-        "destination": "/servers.html"
+        "source": "/about",
+        "destination": "/about.html"
       },
       {
         "source": "/news",
@@ -23,6 +23,14 @@
       {
         "source": "/news/service-alerts",
         "destination": "/news/service-alerts.html"
+      },
+      {
+        "source": "/forums",
+        "destination": "/forums.html"
+      },
+      {
+        "source": "/forums/view",
+        "destination": "/forums/view.html"
       }
     ]
   }
