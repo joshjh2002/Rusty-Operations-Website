@@ -31,15 +31,12 @@ export default function Navbar() {
               <div>
                 <a href="/" className="flex items-center py-4 px-2">
                   <Image
-                    src="/img/rust-logo.jpg"
-                    width={32}
+                    src="/img/rust-logo-text-only.jpg"
+                    width={80}
                     height={32}
                     alt="Logo"
-                    className="h-8 w-8 mr-2 rounded-full"
+                    className="mr-2"
                   />
-                  <span className="font-semibold text-white text-lg">
-                    Rusty Operations
-                  </span>
                 </a>
               </div>
               <div className="hidden md:flex items-center space-x-1">
