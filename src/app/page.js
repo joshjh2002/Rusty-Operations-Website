@@ -17,10 +17,11 @@ export default function Home() {
         <section id="welcome">
           <div className="flex justify-center">
             <Image
-              src="/img/rust-logo-transparent.jpg"
+              src="/img/rust-logo.jpg"
               width={384}
               height={384}
               alt="Logo"
+              className="rounded-full"
             />
           </div>
         </section>
