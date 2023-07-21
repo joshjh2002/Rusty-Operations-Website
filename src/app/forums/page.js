@@ -45,7 +45,7 @@ export default function Page() {
       <Navbar />
       <div className="content">
         <section id="news">
-          <h1>News</h1>
+          <h1>Forums</h1>
           <div className="flex justify-center p-4">
             <div className="grid place-items-center grid-cols-1 gap-4">
               {
