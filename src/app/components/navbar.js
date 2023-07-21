@@ -122,7 +122,7 @@ export default function Navbar() {
                 }
                 href="/about"
               >
-                Home
+                About
               </a>
             </li>
             <li>
