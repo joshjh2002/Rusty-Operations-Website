@@ -1,9 +1,8 @@
 .card {
   display: flex;
   padding: 10px;
-  border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #4449;
   transition: all 0.3s ease-in-out;
 }
 
@@ -22,12 +21,12 @@
   font-weight: bold;
   margin-bottom: 10px;
   text-align: left;
+  color: var(--rust-accent);
 }
 
 .card-content p {
   font-size: 0.9em;
   margin-bottom: 10px;
-  color: black;
   text-align: left;
 }
 
