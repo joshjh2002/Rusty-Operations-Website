@@ -58,6 +58,16 @@ export default function Navbar() {
                 </a>
                 <a
                   className={
+                    pathname.startsWith("/forums")
+                      ? navbarItemActive
+                      : navbarItemInactive
+                  }
+                  href="/forums"
+                >
+                  Forums
+                </a>
+                <a
+                  className={
                     pathname.startsWith("/news")
                       ? navbarItemActive
                       : navbarItemInactive
@@ -113,6 +123,18 @@ export default function Navbar() {
                 href="/about"
               >
                 Home
+              </a>
+            </li>
+            <li>
+              <a
+                className={
+                  pathname.startsWith("/forums")
+                    ? navbarItemActiveMobile
+                    : navbarItemInactiveMobile
+                }
+                href="/forums"
+              >
+                Forums
               </a>
             </li>
             <li>
