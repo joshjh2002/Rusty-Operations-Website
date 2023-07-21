@@ -16,16 +16,7 @@ export default function Home() {
       <div className="content">
         <section id="welcome">
           <h1>Welcome to Rusty Operations!</h1>
-          <div className="grid md:grid-cols-2 mt-8 ">
-            <div className="flex items-center justify-center">
-              <Image
-                src="/img/rust-logo.jpg"
-                width={400}
-                height={400}
-                className="rounded-full"
-                alt="Rusty Operations Logo"
-              />
-            </div>
+          <div className="grid md:grid-cols-1 mt-8 ">
             <div className="flex items-center justify-center">
               <p>
                 Our server brings a premium experience, offering a mixture of
@@ -58,6 +49,9 @@ export default function Home() {
                 to join the heart of our community, our Discord server. We'd
                 love to welcome you!
               </p>
+            </div>
+            <div className="flex items-center justify-center">
+              <p>Meet the team</p>
             </div>
           </div>
         </section>
