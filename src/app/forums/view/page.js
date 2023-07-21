@@ -19,7 +19,7 @@ export default function Page() {
   useEffect(() => {
     document.title = "Rusty Operations | News";
 
-    const fileName = ref(db, `news/${id}/file`);
+    const fileName = ref(db, `forums/${id}/file`);
     onValue(fileName, (snapshot) => {
       const data = snapshot.val();
 

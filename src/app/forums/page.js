@@ -53,7 +53,7 @@ export default function Page() {
                 in links.json and created a HTML element for them */
                 articles.map((item) => (
                   <a
-                    href={`news/view?id=${item.id}`}
+                    href={`forums/view?id=${item.id}`}
                     key={item.id}
                     className="card"
                   >
