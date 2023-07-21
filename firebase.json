@@ -21,8 +21,8 @@
         "destination": "/news/view.html"
       },
       {
-        "source": "/news/latest-news",
-        "destination": "/news/latest-news.html"
+        "source": "/news/service-alerts",
+        "destination": "/news/service-alerts.html"
       }
     ]
   }
