@@ -12,6 +12,12 @@ import "./style.css";
 
 export default function Page() {
   const [articles, setArticles] = useState([]);
+  const [latest, setLatest] = useState({
+    title: "Loading...",
+    description: "Loading...",
+    timestamp: "Loading...",
+  });
+
   useEffect(() => {
     document.title = "Rusty Operations | News";
 
@@ -30,6 +36,12 @@ export default function Page() {
         });
       });
       setArticles(temp);
+    });
+
+    const latestRef = ref(db, `latest`);
+    onValue(latestRef, (snapshot) => {
+      const data = snapshot.val();
+      setLatest(data);
     });
   }, []);
 
@@ -54,11 +66,10 @@ export default function Page() {
                 </div>
                 <div className="card-content">
                   <h2 className="text-center card-title rusty-font">
-                    Latest News
+                    {`${latest.title} (${latest.timestamp})`}
                   </h2>
                   <p className="text-center card-text rusty-font">
-                    View the latest news and service alerts from Rusty
-                    Operations here!
+                    {latest.description}
                   </p>
                 </div>
               </a>
@@ -83,10 +94,10 @@ export default function Page() {
                     </div>
                     <div className="card-content">
                       <h2 className="text-center card-title rusty-font">
-                        {item.title}
+                        {`${item.title} (${item.timestamp})`}
                       </h2>
                       <p className="text-center card-text rusty-font">
-                        {item.description}
+                        {`${item.title} (${item.timestamp})`}
                       </p>
                     </div>
                   </a>
