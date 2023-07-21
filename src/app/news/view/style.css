@@ -1,6 +1,6 @@
 .article h1 {
-  color: black;
-  border-color: black;
+  color: var(--rust-accent);
+  border-color: var(--rust-accent);
 }
 
 .article h2 {
@@ -8,6 +8,7 @@
   text-decoration: underline;
   font-weight: bold;
   text-align: left;
+  color: var(--rust-accent);
 }
 
 .article h3 {
@@ -15,10 +16,10 @@
   text-decoration: underline;
   font-weight: bold;
   text-align: left;
+  color: var(--rust-accent);
 }
 
 .article {
-  background-color: white;
   padding: 1rem;
   width: inherit;
   min-height: calc(100vh - 64px);
@@ -26,8 +27,10 @@
 
 .article p,
 .article a,
-.article li {
-  color: black;
+.article li,
+.article th,
+.article td {
+  color: white;
   font-size: medium;
   font-weight: normal;
   text-align: left;
@@ -50,12 +53,12 @@
 }
 
 .article a:link {
-  color: #0000ee;
+  color: limegreen;
   text-decoration: none;
 }
 
 .article a:visited {
-  text-decoration: none;
+  color: limegreen;
 }
 
 .article a:hover {
@@ -79,7 +82,7 @@
   font-weight: normal;
   text-align: left;
   overflow-wrap: break-word;
-  border-left: 4px solid black;
+  border-left: 4px solid var(--rust-accent);
   padding-left: 1.5rem;
 }
 

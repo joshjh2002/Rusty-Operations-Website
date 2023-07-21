@@ -15,13 +15,14 @@ export default function Home() {
       <Navbar />
       <div className="content">
         <section id="welcome">
-          <h1>Rusty Operations</h1>
-          <Image
-            src="/img/rust-logo-transparent.jpg"
-            width={256}
-            height={256}
-            alt="Logo"
-          />
+          <div className="flex justify-center">
+            <Image
+              src="/img/rust-logo-transparent.jpg"
+              width={384}
+              height={384}
+              alt="Logo"
+            />
+          </div>
         </section>
       </div>
     </main>
