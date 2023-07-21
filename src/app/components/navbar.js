@@ -7,12 +7,12 @@ export default function Navbar() {
   const navbarItemActive =
     "py-4 px-2 border-b-4 border-[color:var(--rust-accent)] font-semibold text-[color:var(--rust-accent)]";
   const navbarItemInactive =
-    "py-4 px-2 text-gray-500 font-semibold hover:text-[color:var(--rust-accent)] transition duration-300";
+    "py-4 px-2 text-white font-semibold hover:text-[color:var(--rust-accent)] transition duration-300";
 
   const navbarItemActiveMobile =
     "block text-sm px-2 py-4 text-white bg-[color:var(--rust-accent)] font-semibold";
   const navbarItemInactiveMobile =
-    "block text-sm px-2 py-4 hover:bg-[color:var(--rust-accent)] transition duration-300";
+    "block text-sm px-2 py-4 text-white hover:bg-[color:var(--rust-accent)] transition duration-300";
 
   const mobile_menu = React.useRef(null);
 
@@ -24,10 +24,10 @@ export default function Navbar() {
 
   return (
     <section id="navbar" className="sticky top-0 z-50">
-      <nav className="bg-white shadow-lg">
+      <nav className="bg-[#0007] shadow-lg">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-center">
-            <div className="flex space-x-7">
+            <div className="flex space-x-32">
               <div>
                 <a href="/" className="flex items-center py-4 px-2">
                   <Image
@@ -37,7 +37,7 @@ export default function Navbar() {
                     alt="Logo"
                     className="h-8 w-8 mr-2 rounded-full"
                   />
-                  <span className="font-semibold text-gray-500 text-lg">
+                  <span className="font-semibold text-white text-lg">
                     Rusty Operations
                   </span>
                 </a>
@@ -50,6 +50,14 @@ export default function Navbar() {
                   href="/"
                 >
                   Home
+                </a>
+                <a
+                  className={
+                    pathname == "/about" ? navbarItemActive : navbarItemInactive
+                  }
+                  href="/about"
+                >
+                  About
                 </a>
                 <a
                   className={
@@ -104,6 +112,18 @@ export default function Navbar() {
                     : navbarItemInactiveMobile
                 }
                 href="/"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                className={
+                  pathname == "/about"
+                    ? navbarItemActiveMobile
+                    : navbarItemInactiveMobile
+                }
+                href="/about"
               >
                 Home
               </a>
