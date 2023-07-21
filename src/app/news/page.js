@@ -30,7 +30,6 @@ export default function Page() {
         });
       });
       setArticles(temp);
-      console.log(temp);
     });
   }, []);
 
