@@ -33,11 +33,11 @@
 }
 
 h1 {
-  color: white;
+  color: var(--rust-accent);
   font-weight: 700;
   text-transform: uppercase;
-  border-bottom: 1px solid white;
-  border-top: 1px solid white;
+  border-bottom: 1px solid var(--rust-accent);
+  border-top: 1px solid var(--rust-accent);
   text-align: center;
 }
 
