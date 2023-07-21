@@ -8,15 +8,18 @@ import { ref, onValue } from "firebase/database";
 
 import { Converter } from "showdown";
 
+import { useSearchParams } from "next/navigation.js";
+
 import "./style.css";
 
-export default function Page({ params, searchParams }) {
+export default function Page() {
   const [content, setContent] = useState("");
+  const [id, setId] = useState(useSearchParams().get("id"));
 
   useEffect(() => {
     document.title = "Rusty Operations | News";
 
-    const fileName = ref(db, `news/${searchParams.id}/file`);
+    const fileName = ref(db, `news/${id}/file`);
     onValue(fileName, (snapshot) => {
       const data = snapshot.val();
 
