@@ -38,7 +38,7 @@ export default function Page() {
       setArticles(temp);
     });
 
-    const latestRef = ref(db, `latest`);
+    const latestRef = ref(db, `service`);
     onValue(latestRef, (snapshot) => {
       const data = snapshot.val();
       setLatest(data);
@@ -54,7 +54,11 @@ export default function Page() {
           <h1>News</h1>
           <div className="flex justify-center p-4">
             <div className="grid place-items-center grid-cols-1 gap-4">
-              <a href={`news/latest-news`} key="latest-news" className="card">
+              <a
+                href={`news/service-alerts`}
+                key="service-alerts"
+                className="card"
+              >
                 <div className="card-image">
                   <Image
                     src="img/rust-logo.jpg"

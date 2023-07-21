@@ -16,7 +16,7 @@ export default function Page() {
   useEffect(() => {
     document.title = "Rusty Operations | Latest News";
 
-    const fileName = ref(db, `latest/file`);
+    const fileName = ref(db, `service/file`);
     onValue(fileName, (snapshot) => {
       const data = snapshot.val();
       console.log(data);
