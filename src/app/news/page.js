@@ -42,6 +42,27 @@ export default function Page() {
           <h1>News</h1>
           <div className="flex justify-center p-4">
             <div className="grid place-items-center grid-cols-1 gap-4">
+              <a href={`news/latest-news`} key="latest-news" className="card">
+                <div className="card-image">
+                  <Image
+                    src="img/rust-logo.jpg"
+                    width={200}
+                    height={0}
+                    className=""
+                    alt="Latest News"
+                  />
+                </div>
+                <div className="card-content">
+                  <h2 className="text-center card-title rusty-font">
+                    Latest News
+                  </h2>
+                  <p className="text-center card-text rusty-font">
+                    View the latest news and service alerts from Rusty
+                    Operations here!
+                  </p>
+                </div>
+              </a>
+              <div className="w-full border border-solid border-white"></div>
               {
                 /* Iterates over all the items in the links array stored 
                 in links.json and created a HTML element for them */
