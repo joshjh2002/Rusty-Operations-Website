@@ -69,7 +69,9 @@ export default function Page() {
                     </div>
                     <div className="card-content">
                       <h2 className="text-center card-title rusty-font">
-                        {`${item.title} (${item.timestamp})`}
+                        {`${item.title} (${new Date(
+                          item.timestamp
+                        ).toLocaleDateString()})`}
                       </h2>
                       <p className="text-center card-text rusty-font">
                         {`${item.description}`}

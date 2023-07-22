@@ -72,14 +72,16 @@ export default function Page() {
                 </div>
                 <div className="card-content">
                   <h2 className="text-center card-title rusty-font">
-                    {`${latest.title} (${latest.timestamp})`}
+                    {`${latest.title} (${new Date(
+                      latest.timestamp
+                    ).toLocaleString()})`}
                   </h2>
                   <p className="text-center card-text rusty-font">
                     {latest.description}
                   </p>
                 </div>
               </a>
-              <div className="w-full border border-solid border-white"></div>
+              <div className="w-full border border-solid border-[var(--rust-accent)]"></div>
               {
                 /* Iterates over all the items in the links array stored 
                 in links.json and created a HTML element for them */
@@ -100,10 +102,12 @@ export default function Page() {
                     </div>
                     <div className="card-content">
                       <h2 className="text-center card-title rusty-font">
-                        {`${item.title} (${item.timestamp})`}
+                        {`${item.title} (${new Date(
+                          item.timestamp
+                        ).toLocaleDateString()})`}
                       </h2>
                       <p className="text-center card-text rusty-font">
-                        {`${item.description} (${item.timestamp})`}
+                        {`${item.description}`}
                       </p>
                     </div>
                   </a>
