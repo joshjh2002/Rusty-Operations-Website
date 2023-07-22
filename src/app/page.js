@@ -51,7 +51,7 @@ export default function Home() {
               Learn More...
             </button>
           </div>
-          <div className="grid grid-cols-5 gap-8 mt-16 bg-[#4449] rounded-xl p-4">
+          <div className="grid grid-cols-5 gap-8 mt-16 bg-[#4449] rounded-xl p-8">
             <a href="https://twitter.com/rustyoperations" target="_blank">
               <Image
                 src="/img/socials/twitter.png"
