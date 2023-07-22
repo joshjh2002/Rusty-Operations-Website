@@ -26,7 +26,7 @@
 }
 
 .content {
-  min-height: calc(100vh - 64px);
+  min-height: calc(100vh - 128px);
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -90,15 +90,12 @@ p {
   content: "";
   background: linear-gradient(
     45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
+    var(--rust-accent),
+    #228b22,
+    #008000,
+    var(--rust-accent),
+    #4f7942,
+    var(--rust-accent)
   );
   position: absolute;
   top: -2px;

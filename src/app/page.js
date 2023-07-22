@@ -1,6 +1,7 @@
 "use client";
 
 import Navbar from "./components/navbar.js";
+import Footer from "./components/footer.js";
 import React, { useEffect } from "react";
 import Image from "next/image";
 
@@ -122,6 +123,7 @@ export default function Home() {
           </div>
         </section>
       </div>
+      <Footer />
     </main>
   );
 }
