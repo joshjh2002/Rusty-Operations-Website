@@ -76,6 +76,13 @@ export default function Navbar() {
                 >
                   News
                 </a>
+                <a
+                  className={navbarItemInactive}
+                  href="https://hq.rustyoperations.net/"
+                  target="_blank"
+                >
+                  Shop
+                </a>
               </div>
             </div>
             <div className="md:hidden flex items-center">
@@ -147,6 +154,15 @@ export default function Navbar() {
                 href="/news"
               >
                 News
+              </a>
+            </li>
+            <li>
+              <a
+                className={navbarItemInactiveMobile}
+                href="https://hq.rustyoperations.net/"
+                target="_blank"
+              >
+                Shop
               </a>
             </li>
           </ul>
