@@ -71,7 +71,7 @@ export default function Page() {
                         {`${item.title} (${item.timestamp})`}
                       </h2>
                       <p className="text-center card-text rusty-font">
-                        {`${item.description} (${item.timestamp})`}
+                        {`${item.description}`}
                       </p>
                     </div>
                   </a>
