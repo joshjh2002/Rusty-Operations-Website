@@ -4,6 +4,7 @@ import Navbar from "./components/navbar.js";
 import Footer from "./components/footer.js";
 import React, { useEffect } from "react";
 import Image from "next/image";
+import LiveData from "./components/livedata.js";
 
 export default function Home() {
   useEffect(() => {
@@ -54,6 +55,7 @@ export default function Home() {
               </button>
             </div>
           </div>
+          <LiveData />
           <div className="grid grid-cols-5 gap-8 mt-16 bg-[#4449] rounded-xl p-8">
             <a
               href="https://twitter.com/rustyoperations"
