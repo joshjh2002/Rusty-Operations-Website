@@ -19,37 +19,39 @@ export default function Home() {
       <Navbar />
       <div className="content">
         <section id="welcome">
-          <div className="flex justify-center">
-            <Image
-              src="/img/rust-logo.jpg"
-              width={384}
-              height={384}
-              alt="Logo"
-              className="rounded-full"
-            />
-          </div>
-          <div className="grid grid-cols-1 gap-4 mt-16 place-items-center">
-            <button
-              onClick={redirectTo("steam://connect/64.40.9.19:28024", true)}
-              className="button-85"
-              role="button"
-            >
-              Join our Server
-            </button>
-            <button
-              onClick={redirectTo("https://discord.gg/5VKTm5upwA", true)}
-              className="button-85"
-              role="button"
-            >
-              Join Our Discord
-            </button>
-            <button
-              onClick={redirectTo("/about", false)}
-              className="button-85 mt-8"
-              role="button"
-            >
-              Learn More...
-            </button>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 place-items-center">
+            <div className="flex justify-center">
+              <Image
+                src="/img/rust-logo.jpg"
+                width={384}
+                height={384}
+                alt="Logo"
+                className="rounded-full"
+              />
+            </div>
+            <div className="grid grid-cols-1 gap-4 sm:mt-0 mt-16 place-items-center">
+              <button
+                onClick={redirectTo("steam://connect/64.40.9.19:28024", true)}
+                className="button-85"
+                role="button"
+              >
+                Join our Server
+              </button>
+              <button
+                onClick={redirectTo("https://discord.gg/5VKTm5upwA", true)}
+                className="button-85"
+                role="button"
+              >
+                Join Our Discord
+              </button>
+              <button
+                onClick={redirectTo("/about", false)}
+                className="button-85 mt-8"
+                role="button"
+              >
+                Learn More...
+              </button>
+            </div>
           </div>
           <div className="grid grid-cols-5 gap-8 mt-16 bg-[#4449] rounded-xl p-8">
             <a href="https://twitter.com/rustyoperations" target="_blank">
