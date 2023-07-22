@@ -15,27 +15,38 @@ import "./style.css";
 export default function Page() {
   const [content, setContent] = useState("");
   const [id, setId] = useState(useSearchParams().get("id"));
+  const [override, setOverride] = useState(useSearchParams().get("override"));
 
   useEffect(() => {
     document.title = "Rusty Operations | News";
 
-    const fileName = ref(db, `news/${id}/file`);
-    onValue(fileName, (snapshot) => {
-      const data = snapshot.val();
+    if (override == null) {
+      const fileName = ref(db, `news/${id}/file`);
+      onValue(fileName, (snapshot) => {
+        const data = snapshot.val();
 
-      if (data == null) {
-        setContent("<h1>This article does not exist</h1>");
-        return;
-      }
+        if (data == null) {
+          setContent("<h1>This article does not exist</h1>");
+          return;
+        }
 
-      fetch(data) // Your POST endpoint
-        .then((response) => response.text()) // If the response is a JSON object return it parsed, otherwise return the response as text
+        fetch(data) // Your POST endpoint
+          .then((response) => response.text()) // If the response is a JSON object return it parsed, otherwise return the response as text
+          .then((data) => {
+            let converter = new Converter();
+            let html = converter.makeHtml(data);
+            setContent(html);
+          });
+      });
+    } else {
+      fetch(override)
+        .then((response) => response.text())
         .then((data) => {
           let converter = new Converter();
           let html = converter.makeHtml(data);
           setContent(html);
         });
-    });
+    }
   }, []);
 
   return (
