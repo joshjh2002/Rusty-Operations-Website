@@ -1,26 +1,44 @@
 .member:hover {
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
 .member:hover .member-info {
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  -webkit-transform: scale(1) translate(0, 25px);
+  -ms-transform: scale(1) translate(0, 25px);
   transform: scale(1) translate(0, 25px);
 }
 
 .member:hover img {
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  -webkit-transform: translate(0, -25px);
+  -ms-transform: translate(0, -25px);
   transform: translate(0, -25px);
 }
 
 .member img {
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   position: absolute;
 }
 
 .member .member-info {
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   position: absolute;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
   transform: scale(0);
 }
 
