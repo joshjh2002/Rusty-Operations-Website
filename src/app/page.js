@@ -56,7 +56,7 @@ export default function Home() {
             </div>
           </div>
           <LiveData />
-          <div className="grid grid-cols-5 gap-8 mt-16 bg-[#4449] rounded-xl p-8">
+          <div className="grid grid-cols-5 gap-8 mt-16 bg-[#4449] rounded-xl p-6">
             <a
               href="https://twitter.com/rustyoperations"
               target="_blank"
@@ -64,8 +64,8 @@ export default function Home() {
             >
               <Image
                 src="/img/socials/twitter.png"
-                width={64}
-                height={64}
+                width={48}
+                height={48}
                 alt="Twitter"
                 className="filter invert"
               />
@@ -77,8 +77,8 @@ export default function Home() {
             >
               <Image
                 src="/img/socials/facebook.png"
-                width={64}
-                height={64}
+                width={48}
+                height={48}
                 alt="Facebook"
                 className="filter invert"
               />
@@ -90,8 +90,8 @@ export default function Home() {
             >
               <Image
                 src="/img/socials/instagram.png"
-                width={64}
-                height={64}
+                width={48}
+                height={48}
                 alt="Instagram"
                 className="filter invert"
               />
@@ -103,8 +103,8 @@ export default function Home() {
             >
               <Image
                 src="/img/socials/youtube.png"
-                width={64}
-                height={64}
+                width={48}
+                height={48}
                 alt="Youtube"
                 className="filter invert"
               />
@@ -116,8 +116,8 @@ export default function Home() {
             >
               <Image
                 src="/img/socials/steam.png"
-                width={64}
-                height={64}
+                width={48}
+                height={48}
                 alt="Steam"
                 className="filter invert"
               />
