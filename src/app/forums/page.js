@@ -9,6 +9,7 @@ import { ref, onValue } from "firebase/database";
 import Image from "next/image";
 
 import "../news/style.css";
+import Footer from "../components/footer.js";
 
 export default function Page() {
   const [articles, setArticles] = useState([]);
@@ -81,6 +82,7 @@ export default function Page() {
           </div>
         </section>
       </div>
+      <Footer />
     </main>
   );
 }

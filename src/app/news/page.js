@@ -10,6 +10,8 @@ import Image from "next/image";
 
 import "./style.css";
 
+import Footer from "../components/footer.js";
+
 export default function Page() {
   const [articles, setArticles] = useState([]);
   const [latest, setLatest] = useState({
@@ -111,6 +113,7 @@ export default function Page() {
           </div>
         </section>
       </div>
+      <Footer />
     </main>
   );
 }

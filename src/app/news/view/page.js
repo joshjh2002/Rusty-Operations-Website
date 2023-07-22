@@ -11,6 +11,7 @@ import { Converter } from "showdown";
 import { useSearchParams } from "next/navigation.js";
 
 import "./style.css";
+import Footer from "@/app/components/footer.js";
 
 export default function Page() {
   const [content, setContent] = useState("");
@@ -61,6 +62,7 @@ export default function Page() {
           ></div>
         </section>
       </div>
+      <Footer />
     </main>
   );
 }

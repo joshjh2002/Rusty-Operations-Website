@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 
 import MeetTheTeam from "../components/meet-the-team.js";
+import Footer from "../components/footer.js";
 
 export default function Home() {
   useEffect(() => {
@@ -58,6 +59,7 @@ export default function Home() {
           </div>
         </section>
       </div>
+      <Footer />
     </main>
   );
 }

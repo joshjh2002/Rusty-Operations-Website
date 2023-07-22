@@ -12,6 +12,8 @@ import { useSearchParams } from "next/navigation.js";
 
 import "../../news/view/style.css";
 
+import Footer from "@/app/components/footer.js";
+
 export default function Page() {
   const [content, setContent] = useState("");
   const [id, setId] = useState(useSearchParams().get("id"));
@@ -63,6 +65,7 @@ export default function Page() {
           ></div>
         </section>
       </div>
+      <Footer />
     </main>
   );
 }

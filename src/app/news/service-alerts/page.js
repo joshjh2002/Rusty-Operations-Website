@@ -9,6 +9,7 @@ import { ref, onValue } from "firebase/database";
 import { Converter } from "showdown";
 
 import "../view/style.css";
+import Footer from "@/app/components/footer.js";
 
 export default function Page() {
   const [content, setContent] = useState("");
@@ -48,6 +49,7 @@ export default function Page() {
           ></div>
         </section>
       </div>
+      <Footer />
     </main>
   );
 }
