@@ -4,6 +4,8 @@ import Navbar from "../components/navbar.js";
 import React, { useEffect } from "react";
 import Image from "next/image";
 
+import MeetTheTeam from "../components/meet-the-team.js";
+
 export default function Home() {
   useEffect(() => {
     document.title = "Rusty Operations | Home";
@@ -50,8 +52,8 @@ export default function Home() {
                 love to welcome you!
               </p>
             </div>
-            <div className="flex items-center justify-center">
-              <p>Meet the team</p>
+            <div className="flex items-center justify-center mt-16">
+              <MeetTheTeam />
             </div>
           </div>
         </section>

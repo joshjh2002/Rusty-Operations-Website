@@ -41,6 +41,14 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  font-size: x-large;
+  text-decoration: underline;
+  font-weight: bold;
+  text-align: left;
+  color: var(--rust-accent);
+}
+
 p {
   color: white;
   font-weight: 300;
