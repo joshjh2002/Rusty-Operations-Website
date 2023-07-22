@@ -56,7 +56,7 @@ export default function Home() {
             </div>
           </div>
           <LiveData />
-          <div className="grid grid-cols-5 mt-16 gap-8 bg-[#4449] place-items-center rounded-xl p-6 m-auto w-max">
+          <div className="grid grid-cols-5 mt-16 gap-8 bg-[#4449] place-items-center rounded-xl p-6 m-auto sm:w-max w-full">
             <a href="https://twitter.com/rustyoperations" target="_blank">
               <Image
                 src="/img/socials/twitter.png"

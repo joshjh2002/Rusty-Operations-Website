@@ -25,7 +25,7 @@ export default function LiveData() {
 
   return (
     <section id="live-data" className="">
-      <footer className="bg-[#4449] mt-16 shadow-lg rounded-xl flex justify-center items-center p-4">
+      <footer className="bg-[#4449] mt-16 shadow-lg rounded-xl flex justify-center items-center p-4 sm:w-max w-full m-auto">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-center">{data.data.attributes.name}</h2>
           <div className="grid sm:grid-cols-4 grid-cols-2 pt-2">
