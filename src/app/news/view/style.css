@@ -17,7 +17,6 @@
 .article {
   padding: 1rem;
   width: inherit;
-  min-height: calc(100vh - 64px);
 }
 
 .article p,
