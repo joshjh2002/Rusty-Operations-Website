@@ -1,9 +1,14 @@
+.article h2 {
+  margin-top: 1rem;
+}
+
 .article h3 {
   font-size: large;
   text-decoration: underline;
   font-weight: bold;
   text-align: left;
   color: var(--rust-accent);
+  margin-top: 0.75rem;
 }
 
 .article {
