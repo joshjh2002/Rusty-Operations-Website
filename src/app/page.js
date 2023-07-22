@@ -56,12 +56,8 @@ export default function Home() {
             </div>
           </div>
           <LiveData />
-          <div className="grid grid-cols-5 gap-8 mt-16 bg-[#4449] rounded-xl p-6">
-            <a
-              href="https://twitter.com/rustyoperations"
-              target="_blank"
-              className="flex justify-center"
-            >
+          <div className="grid grid-cols-5 mt-16 gap-8 bg-[#4449] place-items-center rounded-xl p-6 m-auto w-max">
+            <a href="https://twitter.com/rustyoperations" target="_blank">
               <Image
                 src="/img/socials/twitter.png"
                 width={48}
@@ -70,11 +66,7 @@ export default function Home() {
                 className="filter invert"
               />
             </a>
-            <a
-              href="https://www.facebook.com/RustyOperations"
-              target="_blank"
-              className="flex justify-center"
-            >
+            <a href="https://www.facebook.com/RustyOperations" target="_blank">
               <Image
                 src="/img/socials/facebook.png"
                 width={48}
@@ -86,7 +78,6 @@ export default function Home() {
             <a
               href="https://www.instagram.com/rusty_operations/"
               target="_blank"
-              className="flex justify-center"
             >
               <Image
                 src="/img/socials/instagram.png"
@@ -99,7 +90,6 @@ export default function Home() {
             <a
               href="https://www.youtube.com/channel/UCm-FUo4TagET2kA-JpVpwWw"
               target="_blank"
-              className="flex justify-center"
             >
               <Image
                 src="/img/socials/youtube.png"
@@ -112,7 +102,6 @@ export default function Home() {
             <a
               href="https://steamcommunity.com/groups/rusty-operations"
               target="_blank"
-              className="flex justify-center"
             >
               <Image
                 src="/img/socials/steam.png"
