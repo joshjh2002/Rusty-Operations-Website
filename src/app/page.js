@@ -31,32 +31,76 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-4 mt-16 place-items-center">
             <button
               onClick={redirectTo("steam://connect/64.40.9.19:28024", true)}
-              class="button-85"
+              className="button-85"
               role="button"
             >
               Join our Server
             </button>
             <button
               onClick={redirectTo("https://discord.gg/5VKTm5upwA", true)}
-              class="button-85"
+              className="button-85"
               role="button"
             >
               Join Our Discord
             </button>
             <button
               onClick={redirectTo("/about", false)}
-              class="button-85 mt-8"
+              className="button-85 mt-8"
               role="button"
             >
               Learn More...
             </button>
           </div>
-          <div className="grid grid-cols-5 gap-8 mt-16">
-            <p>Twitter</p>
-            <p>Facebook</p>
-            <p>Instagram</p>
-            <p>Youtube</p>
-            <p>Steam</p>
+          <div className="grid grid-cols-5 gap-8 mt-16 bg-[#8889] rounded-xl p-4">
+            <a href="https://twitter.com/rustyoperations" target="_blank">
+              <Image
+                src="/img/socials/twitter.png"
+                width={64}
+                height={64}
+                alt="Twitter"
+              />
+            </a>
+            <a href="https://www.facebook.com/RustyOperations" target="_blank">
+              <Image
+                src="/img/socials/facebook.png"
+                width={64}
+                height={64}
+                alt="Facebook"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/rusty_operations/"
+              target="_blank"
+            >
+              <Image
+                src="/img/socials/instagram.png"
+                width={64}
+                height={64}
+                alt="Instagram"
+              />
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCm-FUo4TagET2kA-JpVpwWw"
+              target="_blank"
+            >
+              <Image
+                src="/img/socials/youtube.png"
+                width={64}
+                height={64}
+                alt="Youtube"
+              />
+            </a>
+            <a
+              href="https://steamcommunity.com/groups/rusty-operations"
+              target="_blank"
+            >
+              <Image
+                src="/img/socials/steam.png"
+                width={64}
+                height={64}
+                alt="Steam"
+              />
+            </a>
           </div>
         </section>
       </div>
