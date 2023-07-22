@@ -54,7 +54,11 @@ export default function Home() {
             </div>
           </div>
           <div className="grid grid-cols-5 gap-8 mt-16 bg-[#4449] rounded-xl p-8">
-            <a href="https://twitter.com/rustyoperations" target="_blank">
+            <a
+              href="https://twitter.com/rustyoperations"
+              target="_blank"
+              className="flex justify-center"
+            >
               <Image
                 src="/img/socials/twitter.png"
                 width={64}
@@ -63,7 +67,11 @@ export default function Home() {
                 className="filter invert"
               />
             </a>
-            <a href="https://www.facebook.com/RustyOperations" target="_blank">
+            <a
+              href="https://www.facebook.com/RustyOperations"
+              target="_blank"
+              className="flex justify-center"
+            >
               <Image
                 src="/img/socials/facebook.png"
                 width={64}
@@ -75,6 +83,7 @@ export default function Home() {
             <a
               href="https://www.instagram.com/rusty_operations/"
               target="_blank"
+              className="flex justify-center"
             >
               <Image
                 src="/img/socials/instagram.png"
@@ -87,6 +96,7 @@ export default function Home() {
             <a
               href="https://www.youtube.com/channel/UCm-FUo4TagET2kA-JpVpwWw"
               target="_blank"
+              className="flex justify-center"
             >
               <Image
                 src="/img/socials/youtube.png"
@@ -99,6 +109,7 @@ export default function Home() {
             <a
               href="https://steamcommunity.com/groups/rusty-operations"
               target="_blank"
+              className="flex justify-center"
             >
               <Image
                 src="/img/socials/steam.png"
