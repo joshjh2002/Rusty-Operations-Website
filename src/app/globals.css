@@ -83,7 +83,7 @@ p {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: max-content;
+  width: 200px;
 }
 
 .button-85:before {
