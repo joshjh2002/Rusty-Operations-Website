@@ -33,7 +33,7 @@ export default function MeetTheTeam() {
     },
     {
       img: "/img/avatars/krazywabbit.webp",
-      name: "KrazyWabbit",
+      name: "KrazyWabb1t",
       role: "Rust Server Admin",
     },
     {
