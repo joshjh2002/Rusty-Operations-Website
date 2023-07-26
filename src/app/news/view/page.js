@@ -40,7 +40,7 @@ export default function Page() {
           });
       });
     } else {
-      fetch(override)
+      fetch("https://articles.rustyoperations.net/" + override)
         .then((response) => response.text())
         .then((data) => {
           let converter = new Converter();

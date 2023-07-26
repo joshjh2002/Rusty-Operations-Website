@@ -43,7 +43,7 @@ export default function Page() {
           });
       });
     } else {
-      fetch(override) // Your POST endpoint
+      fetch("https://articles.rustyoperations.net/" + override) // Your POST endpoint
         .then((response) => response.text()) // If the response is a JSON object return it parsed, otherwise return the response as text
         .then((data) => {
           let converter = new Converter();
