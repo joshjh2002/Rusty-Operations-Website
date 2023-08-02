@@ -31,6 +31,10 @@
   overflow-wrap: break-word;
 }
 
+.article p {
+  margin-top: 1rem;
+}
+
 .article ol {
   list-style: normal;
   font-size: medium;
