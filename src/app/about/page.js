@@ -53,9 +53,6 @@ export default function Home() {
                 love to welcome you!
               </p>
             </div>
-            <div className="flex items-center justify-center mt-16">
-              <MeetTheTeam />
-            </div>
           </div>
         </section>
       </div>

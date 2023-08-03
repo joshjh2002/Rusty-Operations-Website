@@ -2,7 +2,7 @@
   "hosting": {
     "public": "out",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "site": "rusty-operations-community-website-test",
+    "site": "rusty-operations-community-website",
     "rewrites": [
       {
         "source": "/",
