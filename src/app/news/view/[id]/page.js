@@ -1,9 +1,9 @@
 "use client";
 
-import Navbar from "../../components/navbar.js";
+import Navbar from "../../../components/navbar.js";
 import React, { useEffect, useState } from "react";
 
-import { db } from "../../firebaseInit.js";
+import { db } from "../../../firebaseInit.js";
 import { ref, onValue } from "firebase/database";
 
 import { Converter } from "showdown";
