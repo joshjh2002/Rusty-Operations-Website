@@ -13,6 +13,14 @@ import { useSearchParams } from "next/navigation.js";
 import "./style.css";
 import Footer from "@/app/components/footer.js";
 
+export async function generateMetadata({ params, searchParams }, parent) {
+  // read route params
+  const id = params.id;
+  return {
+    title: `Viewing article ${id}`,
+  };
+}
+
 export default function Page({ params, searchParams }) {
   const [content, setContent] = useState("");
   const [id, setId] = useState(useSearchParams().get("id"));
