@@ -15,7 +15,6 @@ export async function generateMetadata({ params, searchParams }, parent) {
     .then((snapshot) => {
       if (snapshot.exists()) {
         const data = snapshot.val();
-        console.log(data);
         title = data.title;
         description = data.description;
       }
