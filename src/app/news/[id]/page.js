@@ -8,15 +8,13 @@ import { ref, onValue } from "firebase/database";
 
 import { Converter } from "showdown";
 
-import { useSearchParams } from "next/navigation.js";
-
 import "./style.css";
 import Footer from "@/app/components/footer.js";
 
 export default function ClientComponents({ params, searchParams }) {
   const [content, setContent] = useState("");
   const [id, setId] = useState(params.id);
-  const [override, setOverride] = useState(useSearchParams().get("override"));
+  const [override, setOverride] = useState(searchParams.override);
 
   useEffect(() => {
     if (override == null) {
