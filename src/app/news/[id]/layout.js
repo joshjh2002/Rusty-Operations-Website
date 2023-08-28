@@ -12,8 +12,8 @@ export async function generateMetadata({ params, searchParams }, parent) {
   let imageUrl =
     "https://rusty-operations-admin-panel.web.app/img/rust-banner.jpg";
 
-  const fileName = ref(db, `news/${id}`);
-  onValue(fileName, (snapshot) => {
+  const fileName = await ref(db, `news/${id}`);
+  await onValue(fileName, (snapshot) => {
     const data = snapshot.val();
 
     if (data != null) {

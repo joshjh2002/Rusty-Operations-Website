@@ -5,16 +5,15 @@ import { ref, onValue } from "firebase/database";
 const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
-  const id = params.id;
-
   let title = "Latest News";
   let description = "Cannot find a description for this article.";
   let imageUrl =
     "https://rusty-operations-admin-panel.web.app/img/rust-logo.jpg";
 
-  const fileName = ref(db, `service`);
-  onValue(fileName, (snapshot) => {
+  const fileName = await ref(db, `service`);
+  await onValue(fileName, (snapshot) => {
     const data = snapshot.val();
+    console.log(data);
 
     if (data != null) {
       title = data.title;
