@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import { db } from "../../firebaseInit.js";
-import { ref, onValue } from "firebase/database";
+import { ref, onValue, get, child, getDatabase } from "firebase/database";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,18 +10,19 @@ export async function generateMetadata({ params, searchParams }, parent) {
   let imageUrl =
     "https://rusty-operations-admin-panel.web.app/img/rust-logo.jpg";
 
-  const fileName = await ref(db, `service`);
-  await onValue(fileName, (snapshot) => {
-    const data = snapshot.val();
-    console.log(data);
-
-    if (data != null) {
-      title = data.title;
-      description = data.description;
-    }
-  });
-
-  // read route params
+  const dbRef = ref(getDatabase());
+  await get(child(dbRef, `service`))
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        const data = snapshot.val();
+        console.log(data);
+        title = data.title;
+        description = data.description;
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 
   return {
     title, // Text shown in the tab
