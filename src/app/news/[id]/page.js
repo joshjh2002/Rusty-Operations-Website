@@ -13,14 +13,12 @@ import { useSearchParams } from "next/navigation.js";
 import "./style.css";
 import Footer from "@/app/components/footer.js";
 
-export default function Page() {
+export default function ClientComponents({ params, searchParams }) {
   const [content, setContent] = useState("");
-  const [id, setId] = useState(useSearchParams().get("id"));
+  const [id, setId] = useState(params.id);
   const [override, setOverride] = useState(useSearchParams().get("override"));
 
   useEffect(() => {
-    document.title = "Rusty Operations | News";
-
     if (override == null) {
       const fileName = ref(db, `news/${id}/file`);
       onValue(fileName, (snapshot) => {
