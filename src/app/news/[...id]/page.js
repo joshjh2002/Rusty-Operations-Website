@@ -17,7 +17,7 @@ export default function ClientComponents({ params, searchParams }) {
   const [override, setOverride] = useState(searchParams.override);
 
   useEffect(() => {
-    if (override == null) {
+    if (!isNaN(id)) {
       const fileName = ref(db, `news/${id}/file`);
       onValue(fileName, (snapshot) => {
         const data = snapshot.val();
@@ -36,7 +36,13 @@ export default function ClientComponents({ params, searchParams }) {
           });
       });
     } else {
-      fetch("https://articles.rustyoperations.net/" + override + ".md")
+      let override = "/news";
+      for (let i = 0; i < id.length; i++) {
+        override += "/" + id[i];
+      }
+      let url = "https://articles.rustyoperations.net" + override + ".md";
+
+      fetch(url)
         .then((response) => response.text())
         .then((data) => {
           let converter = new Converter();

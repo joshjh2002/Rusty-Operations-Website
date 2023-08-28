@@ -8,7 +8,7 @@ import { ref, onValue } from "firebase/database";
 
 import { Converter } from "showdown";
 
-import "../[id]/style.css";
+import "../[...id]/style.css";
 import Footer from "@/app/components/footer.js";
 
 export default function Page() {

@@ -4,7 +4,7 @@ import { ref, child, get, getDatabase } from "firebase/database";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export async function generateMetadata({ params, searchParams }, parent) {
+export async function generateMetadata({ params }, parent) {
   const id = params.id;
 
   let title = "This article does not exist.";
@@ -12,19 +12,39 @@ export async function generateMetadata({ params, searchParams }, parent) {
   let imageUrl =
     "https://rusty-operations-admin-panel.web.app/img/rust-banner.jpg";
 
-  const dbRef = ref(getDatabase());
-  await get(child(dbRef, `news/${id}`))
-    .then((snapshot) => {
-      if (snapshot.exists()) {
-        const data = snapshot.val();
+  if (!isNaN(id)) {
+    const dbRef = ref(getDatabase());
+    await get(child(dbRef, `forums/${id}`))
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          const data = snapshot.val();
+          title = data.title;
+          description = data.description;
+          imageUrl = data.image;
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  } else {
+    let override = "/forums";
+    for (let i = 0; i < id.length; i++) {
+      override += "/" + id[i];
+    }
+    let url = "https://articles.rustyoperations.net" + override + ".json";
+
+    await fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
         title = data.title;
         description = data.description;
         imageUrl = data.image;
-      }
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
 
   return {
     title, // Text shown in the tab

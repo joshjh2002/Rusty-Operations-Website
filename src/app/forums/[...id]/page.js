@@ -8,7 +8,7 @@ import { ref, onValue } from "firebase/database";
 
 import { Converter } from "showdown";
 
-import "./style.css";
+import "../../news/[...id]/style.css";
 import Footer from "@/app/components/footer.js";
 
 export default function ClientComponents({ params, searchParams }) {
@@ -17,7 +17,7 @@ export default function ClientComponents({ params, searchParams }) {
   const [override, setOverride] = useState(searchParams.override);
 
   useEffect(() => {
-    if (override == null) {
+    if (!isNaN(id)) {
       const fileName = ref(db, `forums/${id}/file`);
       onValue(fileName, (snapshot) => {
         const data = snapshot.val();
@@ -36,7 +36,12 @@ export default function ClientComponents({ params, searchParams }) {
           });
       });
     } else {
-      fetch("https://articles.rustyoperations.net/" + override + ".md")
+      let override = "/forums";
+      for (let i = 0; i < id.length; i++) {
+        override += "/" + id[i];
+      }
+      let url = "https://articles.rustyoperations.net" + override + ".md";
+      fetch(url)
         .then((response) => response.text())
         .then((data) => {
           let converter = new Converter();
