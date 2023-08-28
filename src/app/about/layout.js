@@ -1,11 +1,9 @@
-import "./globals.css";
-import "./fonts.css";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Rusty Operations | Home", // Text shown in the tab
+  title: "Rusty Operations | About", // Text shown in the tab
   description: "Bringing People Together", // Meta description for SEO
   siteName: "Rusty Operations", // Site name for SEO
   url: "https://www.rustyoperations.net", // Site URL
@@ -30,7 +28,7 @@ export const metadata = {
     facebook: "https://www.facebook.com/Rusty-Operations",
   },
   openGraph: {
-    title: "Rusty Operations | Home", // OG title
+    title: "Rusty Operations | About", // OG title
     description: "Bringing People Together", // OG Description
     siteName: "Rusty Operations", // OG Site name
     url: "https://www.rustyoperations.net", // OG URL
@@ -53,7 +51,7 @@ export const metadata = {
   viewport: "width=device-width, height=device-height, initial-scale=1.0", // Viewport data
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>

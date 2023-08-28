@@ -1,17 +1,13 @@
 "use client";
 
 import Navbar from "../components/navbar.js";
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 
 import MeetTheTeam from "../components/meet-the-team.js";
 import Footer from "../components/footer.js";
 
 export default function Home() {
-  useEffect(() => {
-    document.title = "Rusty Operations | Home";
-  }, []);
-
   return (
     <main>
       <div className="bg"></div>

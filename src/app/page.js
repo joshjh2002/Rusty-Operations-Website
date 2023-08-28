@@ -2,16 +2,12 @@
 
 import Navbar from "./components/navbar.js";
 import Footer from "./components/footer.js";
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import LiveData from "./components/livedata.js";
 import Socials from "./components/socials.js";
 
 export default function Home() {
-  useEffect(() => {
-    document.title = "Rusty Operations | Home";
-  }, []);
-
   const redirectTo = (url, blank) => () => {
     window.open(url, blank ? "_blank" : "_self");
   };

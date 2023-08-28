@@ -20,8 +20,6 @@ export default function Page() {
   });
 
   useEffect(() => {
-    document.title = "Rusty Operations | News";
-
     const articleRef = ref(db, `forums`);
     onValue(articleRef, (snapshot) => {
       const data = snapshot.val();
