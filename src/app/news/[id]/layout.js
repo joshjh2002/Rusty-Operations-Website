@@ -1,11 +1,33 @@
-import ClientComponents from "./client-component.js";
+import { Inter } from "next/font/google";
+import { db } from "../../firebaseInit.js";
+import { ref, onValue } from "firebase/database";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({ params, searchParams }, parent) {
-  // read route params
   const id = params.id;
+
+  let title = "This article does not exist.";
+  let description = "Please check the URL and try again.";
+  let imageUrl =
+    "https://rusty-operations-admin-panel.web.app/img/rust-banner.jpg";
+
+  const fileName = ref(db, `news/${id}`);
+  onValue(fileName, (snapshot) => {
+    const data = snapshot.val();
+
+    if (data != null) {
+      title = data.title;
+      description = data.description;
+      imageUrl = data.image;
+    }
+  });
+
+  // read route params
+
   return {
-    title: `Metadata ${id}`, // Text shown in the tab
-    description: "This is a new article", // Meta description for SEO
+    title, // Text shown in the tab
+    description, // Meta description for SEO
     siteName: "Rusty Operations", // Site name for SEO
     url: "https://www.rustyoperations.net", // Site URL
     authors: [
@@ -18,7 +40,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     creator: "Josh Helman",
     images: [
       {
-        url: "https://rusty-operations-admin-panel.web.app/img/rust-banner.jpg",
+        url: imageUrl,
         width: 800,
         height: 600,
       },
@@ -29,13 +51,13 @@ export async function generateMetadata({ params, searchParams }, parent) {
       facebook: "https://www.facebook.com/Rusty-Operations",
     },
     openGraph: {
-      title: `Metadata ${id}`, // OG title
-      description: "This is a new article", // OG Description
-      siteName: `Metadata ${id}`, // OG Site name
+      title, // OG title
+      description, // OG Description
+      siteName: "Rusty Operations", // OG Site name
       url: "https://www.rustyoperations.net", // OG URL
       images: [
         {
-          url: "https://rusty-operations-admin-panel.web.app/img/rust-banner.jpg", // Image for sites to use
+          url: imageUrl, // Image for sites to use
           width: 800,
           height: 600,
         },
@@ -53,6 +75,10 @@ export async function generateMetadata({ params, searchParams }, parent) {
   };
 }
 
-export default function Page() {
-  return <ClientComponents />;
+export default function Layout({ children }) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  );
 }

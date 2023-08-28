@@ -10,22 +10,17 @@ import { Converter } from "showdown";
 
 import { useSearchParams } from "next/navigation.js";
 
-import "../../news/view/style.css";
-
+import "./style.css";
 import Footer from "@/app/components/footer.js";
 
-export default function Page() {
+export default function ClientComponents({ params, searchParams }) {
   const [content, setContent] = useState("");
-  const [id, setId] = useState(useSearchParams().get("id"));
+  const [id, setId] = useState(params.id);
   const [override, setOverride] = useState(useSearchParams().get("override"));
 
   useEffect(() => {
-    document.title = "Rusty Operations | News";
-    console.log("id", id);
-    console.log("override", override);
-
     if (override == null) {
-      const fileName = ref(db, `forums/${id}/file`);
+      const fileName = ref(db, `news/${id}/file`);
       onValue(fileName, (snapshot) => {
         const data = snapshot.val();
 
@@ -43,8 +38,8 @@ export default function Page() {
           });
       });
     } else {
-      fetch("https://articles.rustyoperations.net/" + override + ".md") // Your POST endpoint
-        .then((response) => response.text()) // If the response is a JSON object return it parsed, otherwise return the response as text
+      fetch("https://articles.rustyoperations.net/" + override + ".md")
+        .then((response) => response.text())
         .then((data) => {
           let converter = new Converter();
           let html = converter.makeHtml(data);

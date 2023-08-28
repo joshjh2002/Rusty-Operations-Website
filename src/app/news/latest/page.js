@@ -8,15 +8,13 @@ import { ref, onValue } from "firebase/database";
 
 import { Converter } from "showdown";
 
-import "../view/style.css";
+import "../[id]/style.css";
 import Footer from "@/app/components/footer.js";
 
 export default function Page() {
   const [content, setContent] = useState("");
 
   useEffect(() => {
-    document.title = "Rusty Operations | Latest News";
-
     const fileName = ref(db, `service/file`);
     onValue(fileName, (snapshot) => {
       const data = snapshot.val();

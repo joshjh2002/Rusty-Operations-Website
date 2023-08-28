@@ -21,8 +21,6 @@ export default function Page() {
   });
 
   useEffect(() => {
-    document.title = "Rusty Operations | News";
-
     const articleRef = ref(db, `news`);
     onValue(articleRef, (snapshot) => {
       const data = snapshot.val();
@@ -56,11 +54,7 @@ export default function Page() {
           <h1>News</h1>
           <div className="flex justify-center p-4">
             <div className="grid place-items-center grid-cols-1 gap-4">
-              <a
-                href={`news/service-alerts`}
-                key="service-alerts"
-                className="card"
-              >
+              <a href={`news/latest`} key="latest-news" className="card">
                 <div className="card-image">
                   <Image
                     src="img/rust-logo.jpg"
@@ -86,11 +80,7 @@ export default function Page() {
                 /* Iterates over all the items in the links array stored 
                 in links.json and created a HTML element for them */
                 articles.map((item) => (
-                  <a
-                    href={`news/view?id=${item.id}`}
-                    key={item.id}
-                    className="card"
-                  >
+                  <a href={`news/${item.id}`} key={item.id} className="card">
                     <div className="card-image">
                       <Image
                         src={item.image}

@@ -1,9 +1,9 @@
 "use client";
 
-import Navbar from "../../../components/navbar.js";
+import Navbar from "../../components/navbar.js";
 import React, { useEffect, useState } from "react";
 
-import { db } from "../../../firebaseInit.js";
+import { db } from "../../firebaseInit.js";
 import { ref, onValue } from "firebase/database";
 
 import { Converter } from "showdown";
@@ -15,16 +15,12 @@ import Footer from "@/app/components/footer.js";
 
 export default function ClientComponents({ params, searchParams }) {
   const [content, setContent] = useState("");
-  const [id, setId] = useState(useSearchParams().get("id"));
+  const [id, setId] = useState(params.id);
   const [override, setOverride] = useState(useSearchParams().get("override"));
 
-  console.log(params, searchParams);
-
   useEffect(() => {
-    document.title = "Rusty Operations | News";
-
     if (override == null) {
-      const fileName = ref(db, `news/${id}/file`);
+      const fileName = ref(db, `forums/${id}/file`);
       onValue(fileName, (snapshot) => {
         const data = snapshot.val();
 
