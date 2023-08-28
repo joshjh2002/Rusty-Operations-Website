@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import { db } from "../../firebaseInit.js";
-import { ref, onValue, get, child, getDatabase } from "firebase/database";
+import { ref, get, child, getDatabase } from "firebase/database";
 
 const inter = Inter({ subsets: ["latin"] });
 
