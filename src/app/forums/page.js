@@ -13,28 +13,35 @@ import Footer from "../components/footer.js";
 
 export default function Page() {
   const [articles, setArticles] = useState([]);
-  const [latest, setLatest] = useState({
-    title: "Loading...",
-    description: "Loading...",
-    timestamp: "Loading...",
-  });
 
   useEffect(() => {
     const articleRef = ref(db, `forums`);
     onValue(articleRef, (snapshot) => {
       const data = snapshot.val();
       let temp = [];
-      data.forEach((item) => {
+      let id = 0;
+
+      data.forEach(async (item) => {
+        let info = await fetch(
+          `https://articles.rustyoperations.net/forums/${item.file}.json`
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            return data;
+          });
+
         temp.push({
-          id: item.id,
-          title: item.title,
-          description: item.description,
-          timestamp: item.timestamp,
-          image: item.image,
-          alt: item.alt,
+          id,
+          title: info.title,
+          description: info.description,
+          timestamp: info.timestamp,
+          image: info.image,
+          alt: info.title,
+          link: `/forums/${item.file}`,
         });
+        id++;
+        setArticles(temp);
       });
-      setArticles(temp);
     });
   }, []);
 
@@ -51,7 +58,7 @@ export default function Page() {
                 /* Iterates over all the items in the links array stored 
                 in links.json and created a HTML element for them */
                 articles.map((item) => (
-                  <a href={`forums/${item.id}`} key={item.id} className="card">
+                  <a href={`${item.link}`} key={item.id} className="card">
                     <div className="card-image">
                       <Image
                         src={item.image}

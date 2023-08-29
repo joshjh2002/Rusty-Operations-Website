@@ -18,6 +18,7 @@ export default function Page() {
     title: "Loading...",
     description: "Loading...",
     timestamp: "Loading...",
+    link: "/news",
   });
 
   useEffect(() => {
@@ -25,23 +26,57 @@ export default function Page() {
     onValue(articleRef, (snapshot) => {
       const data = snapshot.val();
       let temp = [];
-      data.forEach((item) => {
+      let id = 0;
+
+      data.forEach(async (item) => {
+        let info = await fetch(
+          `https://articles.rustyoperations.net/news/${item.file}.json`
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            return data;
+          });
+
         temp.push({
-          id: item.id,
-          title: item.title,
-          description: item.description,
-          timestamp: item.timestamp,
-          image: item.image,
-          alt: item.alt,
+          id,
+          title: info.title,
+          description: info.description,
+          timestamp: info.timestamp,
+          image: info.image,
+          alt: info.title,
+          link: `/news/${item.file}`,
         });
+        id++;
+        setArticles(temp);
       });
-      setArticles(temp);
     });
 
     const latestRef = ref(db, `service`);
-    onValue(latestRef, (snapshot) => {
+    onValue(latestRef, async (snapshot) => {
       const data = snapshot.val();
-      setLatest(data);
+      let temp = {};
+
+      let file = data.file;
+
+      let info = await fetch(
+        `https://articles.rustyoperations.net/news/${file}.json`
+      )
+        .then((response) => response.json())
+        .then((returned) => {
+          console.log(returned);
+          return returned;
+        });
+
+      temp = {
+        title: info.title,
+        description: info.description,
+        timestamp: info.timestamp,
+        image: info.image,
+        alt: info.title,
+        link: `/news/${data.file}`,
+      };
+
+      setLatest(temp);
     });
   }, []);
 
@@ -54,7 +89,7 @@ export default function Page() {
           <h1>News</h1>
           <div className="flex justify-center p-4">
             <div className="grid place-items-center grid-cols-1 gap-4">
-              <a href={`news/latest`} key="latest-news" className="card">
+              <a href={`${latest.link}`} key="latest-news" className="card">
                 <div className="card-image">
                   <Image
                     src="img/rust-logo.jpg"
@@ -80,7 +115,7 @@ export default function Page() {
                 /* Iterates over all the items in the links array stored 
                 in links.json and created a HTML element for them */
                 articles.map((item) => (
-                  <a href={`news/${item.id}`} key={item.id} className="card">
+                  <a href={`${item.link}`} key={item.id} className="card">
                     <div className="card-image">
                       <Image
                         src={item.image}
