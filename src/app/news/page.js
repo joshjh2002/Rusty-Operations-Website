@@ -29,25 +29,23 @@ export default function Page() {
       let id = 0;
 
       data.forEach(async (item) => {
-        let info = await fetch(
+        await fetch(
           `https://articles.rustyoperations.net/news/${item.file}.json`
         )
           .then((response) => response.json())
           .then((data) => {
-            return data;
+            temp.push({
+              id,
+              title: data.title,
+              description: data.description,
+              timestamp: data.timestamp,
+              image: data.image,
+              alt: data.title,
+              link: `/news/${item.file}`,
+            });
+            id++;
+            setArticles(temp);
           });
-
-        temp.push({
-          id,
-          title: info.title,
-          description: info.description,
-          timestamp: info.timestamp,
-          image: info.image,
-          alt: info.title,
-          link: `/news/${item.file}`,
-        });
-        id++;
-        setArticles(temp);
       });
     });
 
@@ -58,25 +56,20 @@ export default function Page() {
 
       let file = data.file;
 
-      let info = await fetch(
-        `https://articles.rustyoperations.net/news/${file}.json`
-      )
+      await fetch(`https://articles.rustyoperations.net/news/${file}.json`)
         .then((response) => response.json())
-        .then((returned) => {
-          console.log(returned);
-          return returned;
+        .then((data) => {
+          temp = {
+            title: data.title,
+            description: data.description,
+            timestamp: data.timestamp,
+            image: data.image,
+            alt: data.title,
+            link: `/news/${file}`,
+          };
+
+          setLatest(temp);
         });
-
-      temp = {
-        title: info.title,
-        description: info.description,
-        timestamp: info.timestamp,
-        image: info.image,
-        alt: info.title,
-        link: `/news/${data.file}`,
-      };
-
-      setLatest(temp);
     });
   }, []);
 
