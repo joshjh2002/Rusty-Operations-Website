@@ -92,11 +92,11 @@ export default function Page() {
               <a href={`${latest.link}`} key="latest-news" className="card">
                 <div className="card-image">
                   <Image
-                    src="img/rust-logo.jpg"
+                    src={latest.image}
                     width={200}
                     height={0}
                     className=""
-                    alt="Latest News"
+                    alt={latest.alt}
                   />
                 </div>
                 <div className="card-content">
