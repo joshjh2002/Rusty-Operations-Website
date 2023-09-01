@@ -12,3 +12,6 @@ Added metadata for each page
 
 ## v1.1.1
 Forums and news are now referenced by their file location at `https://articles.rustyoperations.net/`. This allows for easier structuring of data.
+
+## v1.1.2
+Removed redundant code and added customisable image sizes to article metadata
