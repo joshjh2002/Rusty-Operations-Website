@@ -11,40 +11,27 @@ export async function generateMetadata({ params }, parent) {
   let description = "Please check the URL and try again.";
   let imageUrl =
     "https://rusty-operations-admin-panel.web.app/img/rust-banner.jpg";
+  let imageW = 800;
+  let imageH = 600;
 
-  if (!isNaN(id)) {
-    const dbRef = ref(getDatabase());
-    await get(child(dbRef, `forums/${id}`))
-      .then((snapshot) => {
-        if (snapshot.exists()) {
-          const data = snapshot.val();
-          title = data.title;
-          description = data.description;
-          imageUrl = data.image;
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  } else {
-    let override = "/forums";
-    for (let i = 0; i < id.length; i++) {
-      override += "/" + id[i];
-    }
-    let url = "https://articles.rustyoperations.net" + override + ".json";
-
-    await fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        title = data.title;
-        description = data.description;
-        imageUrl = data.image;
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+  let override = "/forums";
+  for (let i = 0; i < id.length; i++) {
+    override += "/" + id[i];
   }
+  let url = "https://articles.rustyoperations.net" + override + ".json";
+
+  await fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      title = data.title;
+      description = data.description;
+      imageUrl = data.image;
+      imageW = data.imageW;
+      imageH = data.imageH;
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 
   return {
     title, // Text shown in the tab
@@ -62,8 +49,8 @@ export async function generateMetadata({ params }, parent) {
     images: [
       {
         url: imageUrl,
-        width: 800,
-        height: 600,
+        width: imageW,
+        height: imageH,
       },
     ],
     social: {
@@ -79,8 +66,8 @@ export async function generateMetadata({ params }, parent) {
       images: [
         {
           url: imageUrl, // Image for sites to use
-          width: 800,
-          height: 600,
+          width: imageW,
+          height: imageH,
         },
       ],
       locale: "en-GB", // Location data
