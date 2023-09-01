@@ -29,23 +29,27 @@ export default function Page() {
       let id = 0;
 
       data.forEach(async (item) => {
-        await fetch(
+        let info = await fetch(
           `https://articles.rustyoperations.net/news/${item.file}.json`
-        )
-          .then((response) => response.json())
-          .then((data) => {
-            temp.push({
-              id,
-              title: data.title,
-              description: data.description,
-              timestamp: data.timestamp,
-              image: data.image,
-              alt: data.title,
-              link: `/news/${item.file}`,
-            });
-            id++;
-            setArticles(temp);
-          });
+        );
+
+        if (!info.ok) return;
+
+        let json = await info.json();
+
+        temp.push({
+          id,
+          title: json.title,
+          description: json.description,
+          timestamp: json.timestamp,
+          image: json.image,
+          alt: json.title,
+          link: `/news/${item.file}`,
+        });
+
+        id++;
+
+        if (id == data.length - 1) setArticles(temp);
       });
     });
 
