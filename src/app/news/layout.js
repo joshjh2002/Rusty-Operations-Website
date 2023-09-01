@@ -28,7 +28,7 @@ export const metadata = {
     facebook: "https://www.facebook.com/Rusty-Operations",
   },
   openGraph: {
-    title: "Rusty Operations | Forums", // OG title
+    title: "Rusty Operations | News", // OG title
     description: "Stay up to date with our latest news and alerts!!", // OG Description
     siteName: "Rusty Operations", // OG Site name
     url: "https://www.rustyoperations.net", // OG URL
