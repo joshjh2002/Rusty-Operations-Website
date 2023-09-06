@@ -1,5 +1,4 @@
 "use client";
-import { set } from "firebase/database";
 import React, { useEffect, useState } from "react";
 
 export default function LiveData() {
