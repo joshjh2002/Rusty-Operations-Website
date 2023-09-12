@@ -9,17 +9,17 @@ export default function MeetTheTeam() {
     {
       img: "/img/avatars/ambitious_gear.webp",
       name: "Ambitious_Gear",
-      role: "Rust Server Admin",
+      role: "Server Owner",
     },
     {
       img: "/img/avatars/jackaltaco.webp",
       name: "JackalTaco",
-      role: "Rust Server Admin",
+      role: "Community Manager",
     },
     {
       img: "/img/avatars/josh.gif",
       name: "joshjh2002",
-      role: "Community Manager",
+      role: "Internal Developer",
     },
     {
       img: "/img/avatars/andyhatter.webp",
