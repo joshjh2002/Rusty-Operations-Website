@@ -15,7 +15,7 @@ export default function Home() {
       <div className="content">
         <section id="welcome">
           <h1>Welcome to Rusty Operations!</h1>
-          <div className="grid md:grid-cols-1 mt-8 ">
+          <div className="grid md:grid-cols-1 mt-8 mb-8">
             <div className="flex items-center justify-center">
               <p>
                 Our server brings a premium experience, offering a mixture of
@@ -50,6 +50,7 @@ export default function Home() {
               </p>
             </div>
           </div>
+          <MeetTheTeam />
         </section>
       </div>
       <Footer />
