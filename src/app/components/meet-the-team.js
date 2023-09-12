@@ -9,17 +9,17 @@ export default function MeetTheTeam() {
     {
       img: "/img/avatars/ambitious_gear.webp",
       name: "Ambitious_Gear",
-      role: "Rust Server Admin",
+      role: "Server Owner",
     },
     {
       img: "/img/avatars/jackaltaco.webp",
       name: "JackalTaco",
-      role: "Rust Server Admin",
+      role: "Community Manager",
     },
     {
       img: "/img/avatars/josh.gif",
       name: "joshjh2002",
-      role: "Community Manager",
+      role: "Internal Developer",
     },
     {
       img: "/img/avatars/andyhatter.webp",
@@ -42,12 +42,13 @@ export default function MeetTheTeam() {
       role: "Rust Server Admin",
     },
   ];
+
   return (
-    <section id="MeetTheTeam" className=" bg-[#4449] rounded-xl">
+    <section id="MeetTheTeam" className="bg-[#4449] rounded-xl w-max">
       <h2 className="text-center">Meet The Team</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 meet-the-team">
+      <div className="grid grid-cols-2 place-items-center w-max sm:grid-cols-3 gap-2 mt-8">
         {team.map((member) => (
-          <div className="grid grid-cols-1 place-items-center member">
+          <div className="flex justify-center member">
             <Image
               src={member.img}
               width={50}
