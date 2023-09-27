@@ -17,9 +17,10 @@ export default function ClientComponents({ params, searchParams }) {
     for (let i = 0; i < id.length; i++) {
       override += "/" + id[i];
     }
+
     let url = "https://articles.rustyoperations.net" + override + ".md";
 
-    fetch(url, {})
+    fetch(url)
       .then((response) => {
         if (!response.ok) {
           return "# This article does not exist.";
