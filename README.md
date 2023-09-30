@@ -15,3 +15,6 @@ Forums and news are now referenced by their file location at `https://articles.r
 
 ## v1.1.2
 Removed redundant code and added customisable image sizes to article metadata
+
+## v1.1.3
+Optimised repeat elements into a single file.
