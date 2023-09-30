@@ -1,12 +1,10 @@
 "use client";
 
-import Navbar from "../../components/navbar.js";
 import React, { useEffect, useState } from "react";
 
 import { Converter } from "showdown";
 
 import "./articleViewer.css";
-import Footer from "@/app/components/footer.js";
 
 export default function ArticleViewer({ id, type }) {
   const [content, setContent] = useState("");
@@ -37,18 +35,11 @@ export default function ArticleViewer({ id, type }) {
   }, []);
 
   return (
-    <main>
-      <div className="bg"></div>
-      <Navbar />
-      <div className="content">
-        <section id="article" className="article">
-          <div
-            className="block p-4"
-            dangerouslySetInnerHTML={{ __html: content }}
-          ></div>
-        </section>
-      </div>
-      <Footer />
-    </main>
+    <section id="article" className="article">
+      <div
+        className="block p-4"
+        dangerouslySetInnerHTML={{ __html: content }}
+      ></div>
+    </section>
   );
 }
