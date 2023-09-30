@@ -8,9 +8,8 @@ import { ref, onValue } from "firebase/database";
 
 import Image from "next/image";
 
-import "./style.css";
-
 import Footer from "../components/footer.js";
+import ArticleCards from "../components/articles/articleCards.js";
 
 export default function Page() {
   const [articles, setArticles] = useState([]);
@@ -108,33 +107,7 @@ export default function Page() {
                 </div>
               </a>
               <div className="w-full border border-solid border-[var(--rust-accent)]"></div>
-              {
-                /* Iterates over all the items in the links array stored 
-                in links.json and created a HTML element for them */
-                articles.map((item) => (
-                  <a href={`${item.link}`} key={item.id} className="card">
-                    <div className="card-image">
-                      <Image
-                        src={item.image}
-                        width={200}
-                        height={0}
-                        className=""
-                        alt={item.alt}
-                      />
-                    </div>
-                    <div className="card-content">
-                      <h2 className="text-center card-title rusty-font">
-                        {`${item.title} (${new Date(
-                          item.timestamp
-                        ).toLocaleDateString()})`}
-                      </h2>
-                      <p className="text-center card-text rusty-font">
-                        {`${item.description}`}
-                      </p>
-                    </div>
-                  </a>
-                ))
-              }
+              <ArticleCards type="news" />
             </div>
           </div>
         </section>
