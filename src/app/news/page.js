@@ -12,7 +12,6 @@ import Footer from "../components/footer.js";
 import ArticleCards from "../components/articles/articleCards.js";
 
 export default function Page() {
-  const [articles, setArticles] = useState([]);
   const [latest, setLatest] = useState({
     title: "Loading...",
     description: "Loading...",
@@ -21,37 +20,6 @@ export default function Page() {
   });
 
   useEffect(() => {
-    const articleRef = ref(db, `news`);
-    onValue(articleRef, (snapshot) => {
-      const data = snapshot.val();
-      let temp = [];
-      let id = 0;
-
-      data.forEach(async (item) => {
-        let info = await fetch(
-          `https://articles.rustyoperations.net/news/${item.file}.json`
-        );
-
-        if (!info.ok) return;
-
-        let json = await info.json();
-
-        temp.push({
-          id,
-          title: json.title,
-          description: json.description,
-          timestamp: json.timestamp,
-          image: json.image,
-          alt: json.title,
-          link: `/news/${item.file}`,
-        });
-
-        id++;
-
-        if (id == data.length - 1) setArticles(temp);
-      });
-    });
-
     const latestRef = ref(db, `service`);
     onValue(latestRef, async (snapshot) => {
       const data = snapshot.val();
@@ -91,7 +59,6 @@ export default function Page() {
                     src={latest.image}
                     width={200}
                     height={0}
-                    className=""
                     alt={latest.alt}
                   />
                 </div>

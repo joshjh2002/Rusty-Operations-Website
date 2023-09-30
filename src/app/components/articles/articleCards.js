@@ -40,7 +40,7 @@ export default function ArticleCards({ type }) {
 
         id++;
 
-        if (id == data.length - 1) setArticles(temp);
+        if (id == data.length - 1) await setArticles(temp.reverse());
       });
     });
   }, []);
