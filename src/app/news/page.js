@@ -54,7 +54,7 @@ export default function Page() {
           <div className="flex justify-center p-4">
             <div className="grid place-items-center grid-cols-1 gap-4">
               <a href={`${latest.link}`} key="latest-news" className="card">
-                <div className="card-image">
+                <div className="card-image grid grid-cols-1 place-items-center">
                   <Image
                     src={latest.image}
                     width={200}

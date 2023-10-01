@@ -52,7 +52,7 @@ export default function ArticleCards({ type }) {
                 in links.json and created a HTML element for them */
         articles.map((item) => (
           <a href={`${item.link}`} key={item.id} className="card">
-            <div className="card-image">
+            <div className="card-image grid grid-cols-1 place-items-center">
               <Image
                 src={item.image}
                 width={200}
