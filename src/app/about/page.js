@@ -2,7 +2,6 @@
 
 import Navbar from "../components/navbar.js";
 import React from "react";
-import Image from "next/image";
 
 import MeetTheTeam from "../components/meet-the-team.js";
 import Footer from "../components/footer.js";
