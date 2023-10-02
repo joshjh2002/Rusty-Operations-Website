@@ -19,9 +19,9 @@ export const metadata = {
   creator: "Josh Helman",
   images: [
     {
-      url: "https://rusty-operations-admin-panel.web.app/img/rust-banner.jpg",
-      width: 800,
-      height: 600,
+      url: "https://www.rustyoperations.net/img/rust-banner.jpg",
+      width: 1440,
+      height: 900,
     },
   ],
   social: {
@@ -36,9 +36,9 @@ export const metadata = {
     url: "https://www.rustyoperations.net", // OG URL
     images: [
       {
-        url: "https://rusty-operations-admin-panel.web.app/img/rust-banner.jpg", // Image for sites to use
-        width: 800,
-        height: 600,
+        url: "https://www.rustyoperations.net/img/rust-banner.jpg", // Image for sites to use
+        width: 1440,
+        height: 900,
       },
     ],
     locale: "en-GB", // Location data
@@ -47,7 +47,7 @@ export const metadata = {
       // Icon data
       rel: "icon",
       type: "image/ico",
-      icon: "https://rusty-operations-admin-panel.web.app/favicon.ico",
+      icon: "https://www.rustyoperations.net/favicon.ico",
     },
   },
   viewport: "width=device-width, height=device-height, initial-scale=1.0", // Viewport data
