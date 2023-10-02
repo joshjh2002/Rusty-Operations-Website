@@ -4,8 +4,8 @@ export async function ArticleMetadata(params, type) {
   let title = "This article does not exist.";
   let description = "Please check the URL and try again.";
   let imageUrl = "https://www.rustyoperations.net/img/rust-banner.jpg";
-  let imageW = 800;
-  let imageH = 600;
+  let imageW = 1440;
+  let imageH = 720;
 
   let override = type;
   for (let i = 0; i < id.length; i++) {
