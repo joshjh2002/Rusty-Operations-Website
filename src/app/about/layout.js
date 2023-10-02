@@ -19,7 +19,7 @@ export const metadata = {
     {
       url: "https://www.rustyoperations.net/img/rust-banner.jpg",
       width: 1440,
-      height: 900,
+      height: 720,
     },
   ],
   social: {
@@ -36,7 +36,7 @@ export const metadata = {
       {
         url: "https://www.rustyoperations.net/img/rust-banner.jpg", // Image for sites to use
         width: 1440,
-        height: 900,
+        height: 720,
       },
     ],
     locale: "en-GB", // Location data
