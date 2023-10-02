@@ -3,8 +3,7 @@ export async function ArticleMetadata(params, type) {
 
   let title = "This article does not exist.";
   let description = "Please check the URL and try again.";
-  let imageUrl =
-    "https://rusty-operations-admin-panel.web.app/img/rust-banner.jpg";
+  let imageUrl = "https://www.rustyoperations.net/img/rust-banner.jpg";
   let imageW = 800;
   let imageH = 600;
 
@@ -70,7 +69,7 @@ export async function ArticleMetadata(params, type) {
         // Icon data
         rel: "icon",
         type: "image/ico",
-        icon: "https://rusty-operations-admin-panel.web.app/favicon.ico",
+        icon: "https://www.rustyoperations.net/favicon.ico",
       },
     },
     viewport: "width=device-width, height=device-height, initial-scale=1.0", // Viewport data

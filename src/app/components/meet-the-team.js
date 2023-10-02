@@ -48,7 +48,7 @@ export default function MeetTheTeam() {
       <h2 className="text-center">Meet The Team</h2>
       <div className="grid grid-cols-2 place-items-center w-max sm:grid-cols-3 gap-2 mt-8">
         {team.map((member) => (
-          <div className="flex justify-center member">
+          <div key={member.name} className="flex justify-center member">
             <Image
               src={member.img}
               width={50}
