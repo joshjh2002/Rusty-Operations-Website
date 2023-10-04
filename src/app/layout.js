@@ -2,6 +2,8 @@ import "./globals.css";
 import "./fonts.css";
 import { Inter } from "next/font/google";
 
+import Images from "./images.js";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -19,7 +21,7 @@ export const metadata = {
   creator: "Josh Helman",
   images: [
     {
-      url: "https://www.rustyoperations.net/img/rust-banner.jpg",
+      url: `https://www.rustyoperations.net${Images.banner}`,
       width: 1440,
       height: 720,
     },
@@ -36,7 +38,7 @@ export const metadata = {
     url: "https://www.rustyoperations.net", // OG URL
     images: [
       {
-        url: "https://www.rustyoperations.net/img/rust-banner.jpg", // Image for sites to use
+        url: `https://www.rustyoperations.net${Images.banner}`, // Image for sites to use
         width: 1440,
         height: 720,
       },
@@ -47,7 +49,7 @@ export const metadata = {
       // Icon data
       rel: "icon",
       type: "image/ico",
-      icon: "https://www.rustyoperations.net/favicon.ico",
+      icon: `https://www.rustyoperations.net/${Images.icon}`,
     },
   },
   viewport: "width=device-width, height=device-height, initial-scale=1.0", // Viewport data
