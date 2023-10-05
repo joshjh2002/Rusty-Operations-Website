@@ -13,7 +13,7 @@ export default function ClientComponents({ params }) {
       <div className="bg"></div>
       <Navbar />
       <div className="content">
-        <ArticleViewer id={params.id} type="/news" />;
+        <ArticleViewer id={params.id} type="/news" />
       </div>
       <Footer />
     </main>
