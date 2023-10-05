@@ -10,10 +10,15 @@
   --small-content-size: 540px;
 
   --rust-accent: rgb(255, 149, 0);
+
+  --banner_notext: url("/img/seasonal/halloween/rust-banner-notext.jpg");
+  --banner: url("/img/seasonal/halloween/rust-banner.jpg");
+  --logo: url("/img/seasonal/halloween/rust-logo.jpg");
+  --icon: url("/img/seasonal/halloween/favicon.ico");
 }
 
 .bg {
-  background-image: url("/img/rust-banner-notext.png");
+  background-image: var(--banner_notext);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

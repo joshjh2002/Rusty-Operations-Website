@@ -7,6 +7,8 @@ import Image from "next/image";
 import LiveData from "./components/livedata.js";
 import Socials from "./components/socials.js";
 
+import Images from "@/app/images.js";
+
 export default function Home() {
   const redirectTo = (url, blank) => () => {
     window.open(url, blank ? "_blank" : "_self");
@@ -21,7 +23,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 place-items-center">
             <div className="flex justify-center">
               <Image
-                src="/img/rust-logo.jpg"
+                src={`https://www.rustyoperations.net${Images.logo}`}
                 width={384}
                 height={384}
                 alt="Logo"
