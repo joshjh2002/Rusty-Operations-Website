@@ -21,3 +21,6 @@ Optimised repeat elements into a single file.
 
 ## v1.1.4
 Updated node packages
+
+## v1.1.5
+Article Cards are now always sorted in reverse chronological order
