@@ -18,3 +18,6 @@ Removed redundant code and added customisable image sizes to article metadata
 
 ## v1.1.3
 Optimised repeat elements into a single file.
+
+## v1.1.4
+Updated node packages
