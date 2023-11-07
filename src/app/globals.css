@@ -11,10 +11,10 @@
 
   --rust-accent: rgb(255, 149, 0);
 
-  --banner_notext: url("/img/seasonal/halloween/rust-banner-notext.jpg");
-  --banner: url("/img/seasonal/halloween/rust-banner.jpg");
-  --logo: url("/img/seasonal/halloween/rust-logo.jpg");
-  --icon: url("/img/seasonal/halloween/favicon.ico");
+  --banner_notext: url("/img/rust-banner-notext.jpg");
+  --banner: url("/img/rust-banner.jpg");
+  --logo: url("/img/rust-logo.jpg");
+  --icon: url("/img/favicon.ico");
 }
 
 .bg {
