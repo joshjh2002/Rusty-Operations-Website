@@ -24,3 +24,7 @@ Updated node packages
 
 ## v1.1.5
 Article Cards are now always sorted in reverse chronological order
+
+## v1.1.6
+Updated node packages
+- Highlight - NextJS 14.0.1
