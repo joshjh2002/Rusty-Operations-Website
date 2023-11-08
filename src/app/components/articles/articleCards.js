@@ -54,7 +54,8 @@ export default function ArticleCards({ type }) {
 
   return (
     <>
-      <div className="w-full">
+      <div className="w-full pb-8">
+        <h2>Filters and Search Options</h2>
         <div className="relative h-10 w-full min-w-[200px] rusty-font">
           <input
             className="peer h-full w-full rounded-[7px] border im rusty-font border-[#ff9500] border-t-transparent bg-transparent px-3 py-2.5 !pr-9 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-[#ff9500] placeholder-shown:border-t-[#ff9500] focus:border-2 focus:border-[#ff9500] focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-white"
