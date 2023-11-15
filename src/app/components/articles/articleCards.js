@@ -59,7 +59,7 @@ export default function ArticleCards({ type }) {
         <div className="relative h-10 w-full min-w-[200px] rusty-font">
           <input
             className="peer h-full w-full rounded-[7px] border im rusty-font border-[#ff9500] border-t-transparent bg-transparent px-3 py-2.5 !pr-9 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-[#ff9500] placeholder-shown:border-t-[#ff9500] focus:border-2 focus:border-[#ff9500] focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-white"
-            placeholder=" "
+            placeholder=""
             onChange={(e) => {
               if (e.target.value.trim() === "") return setSearch(articles);
               setSearch(
