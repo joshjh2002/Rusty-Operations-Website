@@ -54,7 +54,7 @@ export default function ArticleCards({ type }) {
 
   return (
     <>
-      <div className="w-full pb-8">
+      {/* <div className="w-full pb-8">
         <h2>Filters and Search Options</h2>
         <div className="relative h-10 w-full min-w-[200px] rusty-font">
           <input
@@ -75,11 +75,11 @@ export default function ArticleCards({ type }) {
             Search for articles
           </label>
         </div>
-      </div>
+      </div> */}
       {
         /* Iterates over all the items in the links array stored 
                 in links.json and created a HTML element for them */
-        search.map((item) => (
+        articles.map((item) => (
           <a href={`${item.link}`} key={item.id} className="card">
             <div className="card-image grid grid-cols-1 place-items-center">
               <Image
