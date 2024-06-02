@@ -5,7 +5,7 @@ export async function ArticleMetadata(params, type) {
 
   let title = "This article does not exist.";
   let description = "Please check the URL and try again.";
-  let imageUrl = `https://www.rustyoperations.net${Images.banner}`;
+  let imageUrl = `https://rusty-operations.vercel.app/${Images.banner}`;
   let imageW = 1440;
   let imageH = 720;
 
@@ -13,7 +13,7 @@ export async function ArticleMetadata(params, type) {
   for (let i = 0; i < id.length; i++) {
     override += "/" + id[i];
   }
-  let url = "https://articles.rustyoperations.net" + override + ".json";
+  let url = "https://operationscentre.github.io/articles/" + override + ".json";
 
   await fetch(url)
     .then((response) => response.json())
@@ -32,7 +32,7 @@ export async function ArticleMetadata(params, type) {
     title, // Text shown in the tab
     description, // Meta description for SEO
     siteName: "Rusty Operations", // Site name for SEO
-    url: "https://www.rustyoperations.net", // Site URL
+    url: "https://rusty-operations.vercel.app/", // Site URL
     authors: [
       {
         name: "Josh Helman",
@@ -57,7 +57,7 @@ export async function ArticleMetadata(params, type) {
       title, // OG title
       description, // OG Description
       siteName: "Rusty Operations", // OG Site name
-      url: "https://www.rustyoperations.net", // OG URL
+      url: "https://rusty-operations.vercel.app/", // OG URL
       images: [
         {
           url: imageUrl, // Image for sites to use
@@ -71,7 +71,7 @@ export async function ArticleMetadata(params, type) {
         // Icon data
         rel: "icon",
         type: "image/ico",
-        icon: `https://www.rustyoperations.net${Images.icon}`,
+        icon: `https://rusty-operations.vercel.app/${Images.icon}`,
       },
     },
     viewport: "width=device-width, height=device-height, initial-scale=1.0", // Viewport data

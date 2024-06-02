@@ -8,7 +8,7 @@ export const metadata = {
   title: "Rusty Operations | Forums", // Text shown in the tab
   description: "Read all of our latest forums and tutorials here!", // Meta description for SEO
   siteName: "Rusty Operations", // Site name for SEO
-  url: "https://www.rustyoperations.net", // Site URL
+  url: "https://rusty-operations.vercel.app/", // Site URL
   authors: [
     {
       name: "Josh Helman",
@@ -19,7 +19,7 @@ export const metadata = {
   creator: "Josh Helman",
   images: [
     {
-      url: `https://www.rustyoperations.net${Images.banner}`,
+      url: `https://rusty-operations.vercel.app/${Images.banner}`,
       width: 1440,
       height: 720,
     },
@@ -33,10 +33,10 @@ export const metadata = {
     title: "Rusty Operations | Forums", // OG title
     description: "Read all of our latest forums and tutorials here!", // OG Description
     siteName: "Rusty Operations", // OG Site name
-    url: "https://www.rustyoperations.net", // OG URL
+    url: "https://rusty-operations.vercel.app/", // OG URL
     images: [
       {
-        url: `https://www.rustyoperations.net${Images.banner}`, // Image for sites to use
+        url: `https://rusty-operations.vercel.app/${Images.banner}`, // Image for sites to use
         width: 1440,
         height: 720,
       },
@@ -47,7 +47,7 @@ export const metadata = {
       // Icon data
       rel: "icon",
       type: "image/ico",
-      icon: `https://www.rustyoperations.net${Images.icon}`,
+      icon: `https://rusty-operations.vercel.app/${Images.icon}`,
     },
   },
   viewport: "width=device-width, height=device-height, initial-scale=1.0", // Viewport data

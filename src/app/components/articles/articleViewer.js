@@ -15,7 +15,7 @@ export default function ArticleViewer({ id, type }) {
       override += "/" + id[i];
     }
 
-    let url = "https://articles.rustyoperations.net" + override + ".md";
+    let url = "https://operationscentre.github.io/articles/" + override + ".md";
 
     fetch(url)
       .then((response) => {

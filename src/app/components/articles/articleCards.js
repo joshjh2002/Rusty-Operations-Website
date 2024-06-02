@@ -22,7 +22,7 @@ export default function ArticleCards({ type }) {
 
       data.forEach(async (item) => {
         let info = await fetch(
-          `https://articles.rustyoperations.net/${type}/${item.file}.json`
+          `https://operationscentre.github.io/articles//${type}/${item.file}.json`
         );
 
         if (!info.ok) return;
