@@ -1,3 +1,12 @@
+# Rusty Operations Website
+This is a now no longer used website and is available for demonstration purposes [here](https://rusty-operations.vercel.app/).
+
+This project shows my skills in;
+- Next.js
+- Firebase
+- JavaScript
+- HCI and Web Design
+
 # Changelog
 
 ## v1.0.0
